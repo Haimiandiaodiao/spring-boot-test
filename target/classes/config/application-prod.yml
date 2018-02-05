@@ -1,0 +1,9 @@
+server:
+#配置安全连接
+    ssl:
+      key-alias: tomcat
+      key-store-password: 123456
+      key-store: classpath:keystore.p12
+      key-store-type: PKCS12
+    port: 8443
+    contextPath: /prod

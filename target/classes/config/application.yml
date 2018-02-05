@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: prod
+
+#---------------------------------------------------
+logging:
+  level:
+  org.springframework.web: INFO
+  Controller.Ch522Application: INFO
+
+#----------------------------------------------------
+debug: true
