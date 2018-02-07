@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25d2b898-3830-4939-ad53-37b70d6f8c5c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dyy/Jdk8_Package/Modul/ToListCollector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_004_StreamCreateApi.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_005_CollectApiTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/BaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/BaseTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_003_ReduceApiTest.java" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_003_ReduceApiTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,11 +60,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_004_StreamCreateApi.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_004_StreamCreateApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_004_StreamCreateApi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
               <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_006_PrimeNumber.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToListCollector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dyy/Jdk8_Package/Modul/ToListCollector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1058">
+              <caret line="52" column="83" lean-forward="false" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Modul/SystemPojo/FileUrlClassLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/mysqlConnecter.java" />
         <option value="$PROJECT_DIR$/src/test/java/ClassLoaderTesst.java" />
         <option value="$PROJECT_DIR$/src/main/java/Modul/DemoObj.java" />
@@ -188,6 +208,7 @@
         <option value="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_005_CollectApiTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dyy/Jdk8_Package/Modul/ToListCollector.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java" />
       </list>
     </option>
   </component>
@@ -271,140 +292,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_002_ThirdProjectTestPackage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dyy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springFast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dyy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jdk8_Package" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modul" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -437,47 +324,7 @@
       <recent name="E:\mars\springFast\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BaseTest.baseUse3">
-    <configuration default="false" name="_004_StreamCreateApi.baseUse2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springFast" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_002_ThirdProjectTestPackage" />
-      <option name="MAIN_CLASS_NAME" value="_002_ThirdProjectTestPackage._004_StreamCreateApi" />
-      <option name="METHOD_NAME" value="baseUse2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="_004_StreamCreateApi.baseUse3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springFast" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_002_ThirdProjectTestPackage" />
-      <option name="MAIN_CLASS_NAME" value="_002_ThirdProjectTestPackage._004_StreamCreateApi" />
-      <option name="METHOD_NAME" value="baseUse3" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit._006_PrimeNumber.baseUse2">
     <configuration default="false" name="_004_StreamCreateApi.baseUse4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springFast" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -525,6 +372,46 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BaseTest" />
       <option name="METHOD_NAME" value="baseUse3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="_006_PrimeNumber.baseUse1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springFast" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_002_ThirdProjectTestPackage" />
+      <option name="MAIN_CLASS_NAME" value="_002_ThirdProjectTestPackage._006_PrimeNumber" />
+      <option name="METHOD_NAME" value="baseUse1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="_006_PrimeNumber.baseUse2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springFast" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_002_ThirdProjectTestPackage" />
+      <option name="MAIN_CLASS_NAME" value="_002_ThirdProjectTestPackage._006_PrimeNumber" />
+      <option name="METHOD_NAME" value="baseUse2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -773,19 +660,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Ch522Application" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit._004_StreamCreateApi.baseUse2" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit._004_StreamCreateApi.baseUse3" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit._004_StreamCreateApi.baseUse4" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit._005_CollectApiTest.baseUse1" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.BaseTest.baseUse3" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit._004_StreamCreateApi.baseUse4" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit._005_CollectApiTest.baseUse1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BaseTest.baseUse3" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit._006_PrimeNumber.baseUse1" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit._006_PrimeNumber.baseUse2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BaseTest.baseUse3" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit._005_CollectApiTest.baseUse1" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit._004_StreamCreateApi.baseUse4" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit._004_StreamCreateApi.baseUse3" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit._004_StreamCreateApi.baseUse2" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit._006_PrimeNumber.baseUse2" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit._006_PrimeNumber.baseUse1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BaseTest.baseUse3" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit._005_CollectApiTest.baseUse1" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit._004_StreamCreateApi.baseUse4" />
       </list>
     </recent_temporary>
   </component>
@@ -814,7 +701,7 @@
       <workItem from="1517128135027" duration="1335000" />
       <workItem from="1517187092193" duration="105006000" />
       <workItem from="1517798287676" duration="3207000" />
-      <workItem from="1517801511987" duration="32788000" />
+      <workItem from="1517801511987" duration="40130000" />
     </task>
     <task id="LOCAL-00001" summary="Jdk8  流的操作">
       <created>1517886187240</created>
@@ -823,7 +710,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517886187240</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="自定义收集器">
+      <created>1517973227467</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1517973227467</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -835,12 +729,6 @@
     </history-entry>
     <history-entry file="BaseTest_baseUse3 - 2018.02.07 at 11h 00m 37s.xml">
       <configuration name="BaseTest.baseUse3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="_004_StreamCreateApi_baseUse4 - 2018.02.06 at 14h 54m 09s.xml">
-      <configuration name="_004_StreamCreateApi.baseUse4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="_004_StreamCreateApi_baseUse4 - 2018.02.06 at 14h 57m 41s.xml">
-      <configuration name="_004_StreamCreateApi.baseUse4" configurationId="JUnit" />
     </history-entry>
     <history-entry file="_004_StreamCreateApi_baseUse4 - 2018.02.06 at 14h 58m 56s.xml">
       <configuration name="_004_StreamCreateApi.baseUse4" configurationId="JUnit" />
@@ -857,9 +745,15 @@
     <history-entry file="_005_CollectApiTest_baseUse1 - 2018.02.06 at 15h 36m 58s.xml">
       <configuration name="_005_CollectApiTest.baseUse1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="_006_PrimeNumber_baseUse1 - 2018.02.07 at 11h 33m 08s.xml">
+      <configuration name="_006_PrimeNumber.baseUse1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="_006_PrimeNumber_baseUse2 - 2018.02.07 at 14h 13m 14s.xml">
+      <configuration name="_006_PrimeNumber.baseUse2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256884000" />
+    <option name="totallyTimeSpent" value="264226000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -882,14 +776,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37206703" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40223464" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40223464" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37877095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37877095" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -907,7 +801,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Jdk8  流的操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jdk8  流的操作" />
+    <MESSAGE value="自定义收集器" />
+    <option name="LAST_COMMIT_MESSAGE" value="自定义收集器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -930,22 +825,27 @@
           <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="98" />
+      <option name="time" value="100" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program/repo/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar!/org/joda/time/chrono/BasicFixedMonthChronology.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program/repo/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar!/org/joda/time/chrono/BasicChronology.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1249,8 +1149,8 @@
         <state relative-caret-position="178">
           <caret line="222" column="48" lean-forward="false" selection-start-line="222" selection-start-column="48" selection-end-line="222" selection-end-column="48" />
           <folding>
-            <element signature="e#6252#6253#0" expanded="true" />
-            <element signature="e#6320#6321#0" expanded="true" />
+            <element signature="e#6252#6253#0" expanded="false" />
+            <element signature="e#6320#6321#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1268,22 +1168,6 @@
         <state relative-caret-position="313">
           <caret line="333" column="0" lean-forward="true" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dyy/Jdk8_Package/Modul/ToListCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="52" column="83" lean-forward="false" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1308,8 +1192,8 @@
         <state relative-caret-position="-870">
           <caret line="4396" column="45" lean-forward="false" selection-start-line="4396" selection-start-column="42" selection-end-line="4396" selection-end-column="45" />
           <folding>
-            <element signature="e#175299#175300#0" expanded="true" />
-            <element signature="e#175342#175343#0" expanded="true" />
+            <element signature="e#175299#175300#0" expanded="false" />
+            <element signature="e#175342#175343#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1346,6 +1230,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dyy/Jdk8_Package/Modul/ToListCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1058">
+          <caret line="52" column="83" lean-forward="false" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
