@@ -110,12 +110,46 @@ public class _003_ReduceApiTest {
     }
 
     /**
-     * 3.勾股数的计算
+     * 3.重新回顾map和flatMap
      */
     @Test
     public void baseUse3(){
         //用数组来表示勾股数 new int[] {3,4,5}
+        String[] strings = {"Hello", "World"};
+        //每个去除完之后再合并
+        List<String> collect = Arrays.stream(strings).map(a -> a.split("")).flatMap(s -> Arrays.stream(s).distinct()).collect(Collectors.toList());
+        //合并完在去重
+        List<String> collect1 = Arrays.stream(strings).map(a -> a.split("")).flatMap(Arrays::stream).distinct().collect(toList());
+        //每一个数组去重
+        List<String[]> collect2 = Arrays.stream(strings).map(a -> a.split("")).distinct().collect(toList());
 
+        System.out.println("去重完在和并"+collect);
+        System.out.println("合并完在去重"+collect1);
+    }
+
+
+    /**
+     * 4.勾股数的枚举
+     */
+    @Test
+    public void baseUse4(){
+        List<int[]> collect = IntStream.rangeClosed(1, 100).boxed().flatMap(
+                s -> IntStream.rangeClosed(s, 100)
+                        .filter(a -> Math.sqrt(s * s + a * a) % 1 == 0).mapToObj(a -> new int[]{s, a, (int) Math.sqrt(s * s + a * a)})
+        ).collect(toList());
+
+//        int i=1;
+//        for (Stream<int[]> tmp : collect) {
+//            List<int[]> collect1 = tmp.collect(toList());
+//            for (int[] ints : collect1) {
+//                System.out.println(Arrays.toString(ints));
+//            }
+//            System.out.println("下一个流=============="+i);
+//            i++;
+//        }
+        for (int[] ints : collect) {
+            System.out.println(Arrays.toString(ints));
+        }
     }
 
 }

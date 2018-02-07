@@ -2,10 +2,7 @@ import com.dyy.Modul.Entity.Father;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 基础的一些测试
@@ -51,6 +48,17 @@ public class BaseTest {
         BigDecimal divide = aa.divide(bb,4,BigDecimal.ROUND_HALF_UP);
         System.out.println(divide);
 
+    }
+
+    @Test
+    public void baseUse3(){
+        //终态的不让进行添加删除的操作
+        List<Object> objects = Collections.emptyList();
+        objects.add("1");
+        List<Object> objects1 = Collections.emptyList();
+        objects1.add("a");
+        List<Object> objects2 = Collections.emptyList();
+        objects2.add("#");
     }
 
 
