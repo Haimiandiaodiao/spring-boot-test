@@ -7,10 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25d2b898-3830-4939-ad53-37b70d6f8c5c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_001_HttpComponents/_001_HttpComponents_01.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_004_JavaIO/_001_IOBaseUse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_005_Thread/_001_Callable.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/_002_ThirdProjectTestPackage/_001_FuncationInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/_002_ThirdProjectTestPackage/_002_StreamApiTest.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springFast.iml" afterPath="$PROJECT_DIR$/springFast.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_001_IntrospectorTest.java" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_001_IntrospectorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_002_ClassLoaderTesst.java" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_002_ClassLoaderTesst.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_003_BeanUnitTest.java" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_003_BeanUnitTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_004_FastJsonTest.java" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_004_FastJsonTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_005_DataTimeTest.java" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_005_DataTimeTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_006_WeekReport.java" afterPath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_WeekReport.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_001_FuncationInterface.java" afterPath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_001_FuncationInterface.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_002_StreamApiTest.java" afterPath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_002_StreamApiTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_003_ReduceApiTest.java" afterPath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_003_ReduceApiTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_004_StreamCreateApi.java" afterPath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_004_StreamCreateApi.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_005_CollectApiTest.java" afterPath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_005_CollectApiTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java" afterPath="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_006_PrimeNumber.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,11 +40,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_001_HttpComponents_01.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_001_HttpComponents/_001_HttpComponents_01.java">
+      <file leaf-file-name="_001_Callable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/_005_Thread/_001_Callable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="23" />
+            <state relative-caret-position="18">
+              <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,21 +52,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentType.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program/repo/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6-sources.jar!/org/apache/http/entity/ContentType.java">
+      <file leaf-file-name="_001_IntrospectorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_001_IntrospectorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="66" column="19" lean-forward="false" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+            <state relative-caret-position="184">
+              <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringEntity.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program/repo/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6-sources.jar!/org/apache/http/entity/StringEntity.java">
+      <file leaf-file-name="_003_BeanUnitTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_003_BeanUnitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="91" column="11" lean-forward="false" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+            <state relative-caret-position="-511">
+              <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_004_FastJsonTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_004_FastJsonTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="41">
+              <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_006_WeekReport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_WeekReport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -121,11 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/ClassLoaderTesst.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Modul/DemoObj.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Modul/Person.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BeanInfoTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BeanInfoTest1.java" />
         <option value="$PROJECT_DIR$/src/main/java/Modul/Entity/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/Modul/Entity/Father.java" />
         <option value="$PROJECT_DIR$/src/test/java/_001_IntrospectorTest.java" />
@@ -172,6 +200,11 @@
         <option value="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_001_HttpComponents/_001_HttpComponents_01.java" />
+        <option value="$PROJECT_DIR$/chara.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/_004_JavaIO/_001_IOBaseUse.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_006_PrimeNumber.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_WeekReport.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_005_Thread/_001_Callable.java" />
       </list>
     </option>
   </component>
@@ -299,7 +332,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_002_ThirdProjectTestPackage" />
+              <option name="myItemId" value="_005_Thread" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,10 +359,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="_002_ThirdProjectTestPackage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_001_HttpComponents" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,67 +434,7 @@
       <recent name="E:\mars\springFast\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit._001_HttpComponents_01.baseUse7">
-    <configuration default="false" name="_001_HttpComponents_01.baseUse1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springFast" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_002_ThirdProjectTestPackage._001_HttpComponents" />
-      <option name="MAIN_CLASS_NAME" value="_002_ThirdProjectTestPackage._001_HttpComponents._001_HttpComponents_01" />
-      <option name="METHOD_NAME" value="baseUse1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="_001_HttpComponents_01.baseUse2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springFast" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_002_ThirdProjectTestPackage._001_HttpComponents" />
-      <option name="MAIN_CLASS_NAME" value="_002_ThirdProjectTestPackage._001_HttpComponents._001_HttpComponents_01" />
-      <option name="METHOD_NAME" value="baseUse2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="_001_HttpComponents_01.baseUse3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springFast" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_002_ThirdProjectTestPackage._001_HttpComponents" />
-      <option name="MAIN_CLASS_NAME" value="_002_ThirdProjectTestPackage._001_HttpComponents._001_HttpComponents_01" />
-      <option name="METHOD_NAME" value="baseUse3" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit._001_Callable.baseUse1">
     <configuration default="false" name="_001_HttpComponents_01.baseUse4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springFast" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -493,6 +462,66 @@
       <option name="PACKAGE_NAME" value="_002_ThirdProjectTestPackage._001_HttpComponents" />
       <option name="MAIN_CLASS_NAME" value="_002_ThirdProjectTestPackage._001_HttpComponents._001_HttpComponents_01" />
       <option name="METHOD_NAME" value="baseUse7" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="_001_IOBaseUse.baseUse2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springFast" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_004_JavaIO" />
+      <option name="MAIN_CLASS_NAME" value="_004_JavaIO._001_IOBaseUse" />
+      <option name="METHOD_NAME" value="baseUse2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="_001_IOBaseUse.baseUse1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springFast" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_004_JavaIO" />
+      <option name="MAIN_CLASS_NAME" value="_004_JavaIO._001_IOBaseUse" />
+      <option name="METHOD_NAME" value="baseUse1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="_001_Callable.baseUse1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springFast" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_005_Thread" />
+      <option name="MAIN_CLASS_NAME" value="_005_Thread._001_Callable" />
+      <option name="METHOD_NAME" value="baseUse1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -741,19 +770,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Ch522Application" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse1" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse2" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse3" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse4" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse7" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse4" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse7" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit._001_IOBaseUse.baseUse2" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit._001_IOBaseUse.baseUse1" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit._001_Callable.baseUse1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse7" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse4" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse3" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse2" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse1" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit._001_Callable.baseUse1" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit._001_IOBaseUse.baseUse1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit._001_IOBaseUse.baseUse2" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse7" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit._001_HttpComponents_01.baseUse4" />
       </list>
     </recent_temporary>
   </component>
@@ -782,7 +811,7 @@
       <workItem from="1517128135027" duration="1335000" />
       <workItem from="1517187092193" duration="105006000" />
       <workItem from="1517798287676" duration="3207000" />
-      <workItem from="1517801511987" duration="52105000" />
+      <workItem from="1517801511987" duration="62100000" />
     </task>
     <task id="LOCAL-00001" summary="Jdk8  流的操作">
       <created>1517886187240</created>
@@ -805,43 +834,50 @@
       <option name="project" value="LOCAL" />
       <updated>1517984695838</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="HttpClient&#10;">
+      <created>1518055739218</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1518055739218</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_001_HttpComponents_01_baseUse1 - 2018.02.07 at 15h 08m 40s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse1" configurationId="JUnit" />
+    <history-entry file="_001_Callable_baseUse1 - 2018.02.08 at 14h 42m 43s.xml">
+      <configuration name="_001_Callable.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse1 - 2018.02.07 at 15h 08m 42s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse1" configurationId="JUnit" />
+    <history-entry file="_001_Callable_baseUse1 - 2018.02.08 at 14h 42m 57s.xml">
+      <configuration name="_001_Callable.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse1 - 2018.02.07 at 15h 09m 17s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse1" configurationId="JUnit" />
+    <history-entry file="_001_IOBaseUse_baseUse1 - 2018.02.08 at 11h 24m 48s.xml">
+      <configuration name="_001_IOBaseUse.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse2 - 2018.02.07 at 15h 16m 33s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse2" configurationId="JUnit" />
+    <history-entry file="_001_IOBaseUse_baseUse1 - 2018.02.08 at 11h 25m 54s.xml">
+      <configuration name="_001_IOBaseUse.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse3 - 2018.02.07 at 15h 25m 42s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse3" configurationId="JUnit" />
+    <history-entry file="_001_IOBaseUse_baseUse1 - 2018.02.08 at 11h 26m 34s.xml">
+      <configuration name="_001_IOBaseUse.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse3 - 2018.02.07 at 15h 26m 17s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse3" configurationId="JUnit" />
+    <history-entry file="_001_IOBaseUse_baseUse1 - 2018.02.08 at 11h 37m 44s.xml">
+      <configuration name="_001_IOBaseUse.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse3 - 2018.02.07 at 15h 28m 13s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse3" configurationId="JUnit" />
+    <history-entry file="_001_IOBaseUse_baseUse1 - 2018.02.08 at 11h 39m 33s.xml">
+      <configuration name="_001_IOBaseUse.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse4 - 2018.02.07 at 16h 10m 59s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse4" configurationId="JUnit" />
+    <history-entry file="_001_IOBaseUse_baseUse1 - 2018.02.08 at 11h 51m 20s.xml">
+      <configuration name="_001_IOBaseUse.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse4 - 2018.02.07 at 16h 11m 37s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse4" configurationId="JUnit" />
+    <history-entry file="_001_IOBaseUse_baseUse1 - 2018.02.08 at 11h 55m 01s.xml">
+      <configuration name="_001_IOBaseUse.baseUse1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="_001_HttpComponents_01_baseUse7 - 2018.02.07 at 17h 57m 06s.xml">
-      <configuration name="_001_HttpComponents_01.baseUse7" configurationId="JUnit" />
+    <history-entry file="_001_IOBaseUse_baseUse2 - 2018.02.08 at 11h 34m 09s.xml">
+      <configuration name="_001_IOBaseUse.baseUse2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276201000" />
+    <option name="totallyTimeSpent" value="286196000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -866,7 +902,8 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40223464" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38752666" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -876,7 +913,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3880484" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -891,19 +927,20 @@
     <MESSAGE value="Jdk8  流的操作" />
     <MESSAGE value="自定义收集器" />
     <MESSAGE value="自定义质数收集器" />
-    <option name="LAST_COMMIT_MESSAGE" value="自定义质数收集器" />
+    <MESSAGE value="HttpClient&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="HttpClient&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_005_DataTimeTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_005_DataTimeTest.java</url>
           <line>232</line>
           <properties />
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_005_CollectApiTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_005_CollectApiTest.java</url>
           <line>54</line>
           <properties />
           <option name="timeStamp" value="96" />
@@ -915,13 +952,13 @@
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_006_PrimeNumber.java</url>
           <line>47</line>
           <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_006_PrimeNumber.java</url>
           <line>57</line>
           <properties />
           <option name="timeStamp" value="99" />
@@ -932,69 +969,32 @@
           <properties />
           <option name="timeStamp" value="100" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/_004_JavaIO/_001_IOBaseUse.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/_004_JavaIO/_001_IOBaseUse.java</url>
+          <line>56</line>
+          <properties class="_004_JavaIO._001_IOBaseUse" method="baseUse2" />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="101" />
+      <option name="time" value="103" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program/repo/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar!/org/joda/time/chrono/AssembledChronology.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program/repo/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar!/org/joda/time/base/BaseDateTime.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="94" column="25" lean-forward="false" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program/repo/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar!/org/joda/time/chrono/ZonedChronology.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="275" column="45" lean-forward="false" selection-start-line="275" selection-start-column="45" selection-end-line="275" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program/repo/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar!/org/joda/time/DateTimeZone.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="543" column="44" lean-forward="true" selection-start-line="543" selection-start-column="44" selection-end-line="543" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dyy/Configution/FastJsonHttpMessageConvertersConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="38" selection-end-column="77" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_001_IntrospectorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_002_ClassLoaderTesst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_003_BeanUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1009,30 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_005_DataTimeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_004_FastJsonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_006_WeekReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1157,14 +1133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_001_FuncationInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="98" column="67" lean-forward="false" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program/jdk1.8.0_31/src.zip!/java/util/function/IntConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -1177,24 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_003_ReduceApiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="29" column="6" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="29" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_002_StreamApiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="28" column="61" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="28" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1282,42 +1232,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_005_CollectApiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_004_StreamCreateApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dyy/Jdk8_Package/Modul/ToListCollector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1058">
           <caret line="52" column="83" lean-forward="false" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_PrimeNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1350,6 +1270,144 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program/jdk1.8.0_31/src.zip!/java/io/OutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chara.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_004_JavaIO/_001_IOBaseUse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_001_FuncationInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_002_StreamApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_003_ReduceApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_004_StreamCreateApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_005_CollectApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_001_Jdk8TestPackage/_006_PrimeNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_002_ClassLoaderTesst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_005_DataTimeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_001_IntrospectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_003_BeanUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-511">
+          <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_004_FastJsonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_002_ThirdProjectTestPackage/_006_WeekReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_005_Thread/_001_Callable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

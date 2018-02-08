@@ -1,4 +1,4 @@
-package _002_ThirdProjectTestPackage;
+package _001_Jdk8TestPackage;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package _001_Jdk8TestPackage;
+package _002_ThirdProjectTestPackage;
 
 import com.dyy.Modul.Entity.Father;
 import com.dyy.Modul.Entity.Son;

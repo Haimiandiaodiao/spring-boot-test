@@ -1,8 +1,7 @@
-package _001_Jdk8TestPackage;
+package _002_ThirdProjectTestPackage;
 
 import com.alibaba.fastjson.JSON;
 import com.dyy.Modul.Entity.Son;
-import com.dyy.ThirdConfigutionPackage.SimplePropertyExcludPreFilter;
 import org.junit.Test;
 
 import java.util.ArrayList;
