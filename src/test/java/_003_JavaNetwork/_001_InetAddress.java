@@ -275,8 +275,29 @@ public class _001_InetAddress {
      * 10.httpURLConnection的使用
      */
     @Test
-    public void baseUse10(){
-//        URL url = new URL("http://www.ibiblio.org/xml");
+    public void baseUse10() throws IOException {
+        URL url = new URL("http://www.ibiblio.org/xml/");
+        HttpURLConnection con = (HttpURLConnection)url.openConnection();
+        con.setRequestMethod("HEAD");
+        //使用HEAD方法指获得请求头中的信息
+        System.out.println(con.getLastModified());
+        //disconnect()方法允许客户断开连接
+        System.out.println("得到响应吗："+con.getResponseCode());
+        System.out.println("得到响应信息："+con.getResponseMessage());
+//        System.out.println("获得错误信息："+con.getErrorStream());
+
     }
 
+    /**
+     * 11.设置从定向
+     * 【1】.static boolean getFollowRedirects（）得到全局的重定向状态
+     * 【2】.static void setFollowRedirects（boolean follow） 设置全局的重定向
+     * 【3】.getInstanceFollowRedirects 设置某个实例可以重定向么
+     * 【4】.setInstanceFollowRedirecs（boolean ）
+     * 【5】.boolean usingProxy() 查看是否使用了代理服务器
+     * 【6】.setChunkedStreamingMode(int chunkLength)启动分块传输编码的方式，只要传递分块的大小就可以了
+     * 【7】.setFixedLengthStreamingMode（long contentLength） 知道数据的大小
+     * 不能对同一个请求同事使用欧冠分块传输和固定长度流模式 如果给点的URL要求认证或重定向就会抛出异常，你必须手工重试。
+     * 除非确实需要，否则不要使用这个模式。
+     */
 }
