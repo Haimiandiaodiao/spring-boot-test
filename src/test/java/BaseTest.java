@@ -53,12 +53,14 @@ public class BaseTest {
     @Test
     public void baseUse3(){
         //终态的不让进行添加删除的操作
-        List<Object> objects = Collections.emptyList();
+        /*List<Object> objects = Collections.emptyList();
         objects.add("1");
         List<Object> objects1 = Collections.emptyList();
         objects1.add("a");
         List<Object> objects2 = Collections.emptyList();
-        objects2.add("#");
+        objects2.add("#");*/
+        int i2 = + +1;
+        System.out.println(i2);
     }
 
 

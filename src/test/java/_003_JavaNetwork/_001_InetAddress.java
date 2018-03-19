@@ -285,9 +285,26 @@ public class _001_InetAddress {
         System.out.println("得到响应吗："+con.getResponseCode());
         System.out.println("得到响应信息："+con.getResponseMessage());
 //        System.out.println("获得错误信息："+con.getErrorStream());
-
     }
 
+
+    /**
+     * 1.1发送trace请求查看代理服务器做了什么修改
+     */
+    @Test
+    public void baseUse11() throws IOException {
+        URL url = new URL("http://localhost:8000/dev/");
+        HttpURLConnection con = (HttpURLConnection)url.openConnection();
+        con.setRequestMethod("TRACE");
+        con.setRequestProperty("Master-Name","Dyy");
+        Map<String, List<String>> headerFields = con.getHeaderFields();
+        Set<Map.Entry<String, List<String>>> entries = headerFields.entrySet();
+        for (Map.Entry<String, List<String>> entry : entries) {
+            System.out.println(entry.getKey()+"===>"+entry.getValue());
+        }
+//        url.openConnection();
+
+    }
     /**
      * 11.设置从定向
      * 【1】.static boolean getFollowRedirects（）得到全局的重定向状态
@@ -300,4 +317,36 @@ public class _001_InetAddress {
      * 不能对同一个请求同事使用欧冠分块传输和固定长度流模式 如果给点的URL要求认证或重定向就会抛出异常，你必须手工重试。
      * 除非确实需要，否则不要使用这个模式。
      */
+
+
+}
+
+ class Test1 {
+     public volatile int inc = 0;
+
+     public void increase() {
+         inc++;
+     }
+
+     public static void main(String[] args) {
+         final Test1 test = new Test1();
+         for(int i=0;i<10;i++){
+             new Thread(){
+                 public void run() {
+                     for(int j=0;j<1000;j++)
+                         test.increase();
+                 };
+             }.start();
+         }
+
+
+         while(Thread.activeCount()>2)  //保证前面的线程都执行完
+             Thread.yield();
+         System.out.println("活动的线程数："+Thread.activeCount());
+         System.out.println(test.inc);
+         while (Thread.activeCount()>1){
+             System.out.println("活动的线程数："+Thread.activeCount());
+         }
+
+     }
 }
