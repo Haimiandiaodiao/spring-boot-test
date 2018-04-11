@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * @auther Dyy
  * @create 2018/1/22
@@ -35,7 +40,18 @@ public class Ch522Application {
     private PersonInfoService personInfoService;
 
     @RequestMapping("/")
-    public String index(){
+    public String index(HttpServletRequest request){
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        Set<Map.Entry<String, String[]>> entries = parameterMap.entrySet();
+        for (Map.Entry<String, String[]> entry : entries) {
+            System.out.println(entry.getKey()+"===>"+entry.getValue());
+        }
+
+        Enumeration<String> headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()){
+            System.out.println(headerNames.nextElement()+"===>");
+        }
+        System.out.println("获得指定的请求头："+request.getHeader("name-dd"));
         return "Hello World Boot"+book.getAuthor()+"====>"+bookName ;
     }
 

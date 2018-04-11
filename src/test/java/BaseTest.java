@@ -2,6 +2,7 @@ import com.dyy.Modul.Entity.Father;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.nio.ByteBuffer;
 import java.util.*;
 
 /**
@@ -53,12 +54,26 @@ public class BaseTest {
     @Test
     public void baseUse3(){
         //终态的不让进行添加删除的操作
-        List<Object> objects = Collections.emptyList();
-        objects.add("1");
-        List<Object> objects1 = Collections.emptyList();
-        objects1.add("a");
-        List<Object> objects2 = Collections.emptyList();
-        objects2.add("#");
+//        ObjectList<Object> objects = Collections.emptyList();
+//        objects.add("1");
+//        List<Object> objects1 = Collections.emptyList();
+//        objects1.add("a");
+//        List<Object> objects2 = Collections.emptyList();
+//        objects2.add("#");
+//        int i = new Random().nextInt(60);
+
+//        System.out.println(i);
+//
+//        byte[] bytes = "abcdefg".getBytes();
+//        ByteBuffer wrap = ByteBuffer.wrap(bytes);
+//        bytes[0]=1;
+        
+        
+        if('\u0020' == ' '){
+            System.out.println("true");
+        }else{
+            System.out.println('\u0000');
+        }
     }
 
 

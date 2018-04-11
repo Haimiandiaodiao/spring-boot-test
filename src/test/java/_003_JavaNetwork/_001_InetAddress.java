@@ -276,9 +276,10 @@ public class _001_InetAddress {
      */
     @Test
     public void baseUse10() throws IOException {
-        URL url = new URL("http://www.ibiblio.org/xml/");
+        URL url = new URL("http://localhost:8000/dev/");
         HttpURLConnection con = (HttpURLConnection)url.openConnection();
-        con.setRequestMethod("HEAD");
+        con.setRequestMethod("GET");
+        con.setRequestProperty("Name-dd","Dyy");
         //使用HEAD方法指获得请求头中的信息
         System.out.println(con.getLastModified());
         //disconnect()方法允许客户断开连接
