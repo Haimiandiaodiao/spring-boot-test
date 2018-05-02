@@ -2,11 +2,15 @@ package _001_Jdk8TestPackage;
 
 import com.dyy.Jdk8_Package.Modul.Apple;
 import com.dyy.Jdk8_Package.Modul.Letter;
+import com.sun.deploy.uitoolkit.impl.awt.AppletCompatibleHost;
 import org.junit.Test;
 
+import java.nio.file.DirectoryStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.*;
 
 /**
@@ -190,4 +194,46 @@ public class _001_FuncationInterface {
         System.out.println(dyy);
     }
 
+
+    /**
+     * 8.比较器
+     */
+    @Test
+    public void baseUse8(){
+        /*List<Integer> list = Arrays.asList(1, 5, 3, 46, 23, 6, 3, 2, 6);
+        list.sort(Integer::compare);
+        System.out.println(list);*/
+        //先按重量从大到小 只有颜色从小到大
+
+
+        Apple a1 = new Apple(5, "a");
+        Apple a2 = new Apple(5, "d");
+        Apple a3 = new Apple(5, "c");
+        Apple a4 = new Apple(1, "a");
+        Apple a5 = new Apple(2, "a");
+        List<Apple> appList = new ArrayList<>();
+        appList.add(a1);
+        appList.add(a2);
+        appList.add(a3);
+        appList.add(a4);
+        appList.add(a5);
+
+        appList.sort(Comparator.comparing(Apple::getWeight).thenComparing(Comparator.comparing(Apple::getColor).reversed()));
+        System.out.println(appList);
+
+        Predicate<Apple> appleFilter = (Apple aa) -> aa.getWeight() == 1;
+        appleFilter.and(a -> a.getWeight() ==2);
+    }
+
+
+    /**
+     * 9.Lambda提供的语法糖
+     */
+    @Test
+    public void baseUse9(){
+        AtomicInteger d = new AtomicInteger(0);
+        Consumer<Apple> appleConsumer = (Apple a) -> a.getWeight();//这个a.getWeight();的表达式我可以认为他赋值了，也可以认为他没有赋值
+        //但区别是赋值是他的函数接口是Function   不返回值得时候是Consumer 所以那个都对   哈哈太意外了。
+
+    }
 }

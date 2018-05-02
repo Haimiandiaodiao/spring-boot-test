@@ -3,20 +3,26 @@ package _006_HttpClient;
 import org.apache.http.*;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.HttpRequestRetryHandler;
+import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.fluent.Request;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.ConnectionPoolTimeoutException;
 import org.apache.http.conn.ConnectionRequest;
 import org.apache.http.conn.routing.HttpRoute;
+import org.apache.http.cookie.CookieSpec;
 import org.apache.http.entity.*;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.client.StandardHttpRequestRetryHandler;
 import org.apache.http.impl.conn.BasicHttpClientConnectionManager;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.apache.http.impl.cookie.BasicClientCookie;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
@@ -24,6 +30,9 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLSocketFactory;
+import javax.swing.text.StyledEditorKit;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -33,6 +42,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class _001_BaseHttpClient {
 
@@ -171,13 +181,105 @@ public class _001_BaseHttpClient {
     public void baseUse10() throws InterruptedException, ExecutionException, IOException {
         HttpClientContext context = HttpClientContext.create();
         BasicHttpClientConnectionManager connMrg = new BasicHttpClientConnectionManager();
-        HttpRoute route = new HttpRoute(new HttpHost("localhost", 80));
+        //设置目标地址
+        HttpRoute route = new HttpRoute(new HttpHost("www.baidu.com", 80));
         ConnectionRequest connRequest = connMrg.requestConnection(route, null);
         HttpClientConnection conn = connRequest.get(10, TimeUnit.SECONDS);
-
         if(!conn.isOpen()){
-            connMrg.connect(conn,route,1000,context);
+            connMrg.connect(conn,route,10000,context);
             connMrg.routeComplete(conn,route,context);
         }
     }
+
+
+    /**
+     * 10.连接管理器的操作
+     */
+    @Test
+    public void baseUse11(){
+        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
+
+        CloseableHttpClient httpClient = HttpClients.custom().setConnectionManager(cm).build();
+        SocketFactory aDefault = SSLSocketFactory.getDefault();
+
+        RegistryBuilder<Object> objectRegistryBuilder = RegistryBuilder.create();
+
+        String[] urisToGet = {
+                "http://www.baidu.com",
+                "http://www.sina.com",
+                "http://www.qq.com"
+        };
+    }
+
+    /**
+     * 11.自定义拦截器
+     */
+    @Test
+    public void baseUse12() throws IOException {
+        CloseableHttpClient httpclient = HttpClients.custom().addInterceptorLast(new HttpRequestInterceptor() {
+            //拦截器要实现的方法 
+            @Override
+            public void process(HttpRequest httpRequest, HttpContext httpContext) throws HttpException, IOException {
+                //从请求的向下文中拿到想要的属性
+                AtomicInteger count = (AtomicInteger) httpContext.getAttribute("count");
+                //将数据放在请求头中
+                System.out.println("我是后置拦截器请求中Count的值："+count.toString());
+                httpRequest.addHeader("Count", count.getAndIncrement() + "");
+            }
+        }).addInterceptorFirst(new HttpRequestInterceptor() {
+            @Override
+            public void process(HttpRequest httpRequest, HttpContext httpContext) throws HttpException, IOException {
+                AtomicInteger count = (AtomicInteger) httpContext.getAttribute("count");
+                System.out.println("============我是前置拦截器请求中Count的值："+count.toString());
+            }
+        }).addInterceptorFirst(new HttpRequestInterceptor() {
+            @Override
+            public void process(HttpRequest httpRequest, HttpContext httpContext) throws HttpException, IOException {
+                AtomicInteger count = (AtomicInteger) httpContext.getAttribute("count");
+                System.out.println("=====》前前置拦截器Count的值："+count.toString());
+            }
+        }).build();
+
+        AtomicInteger count = new AtomicInteger(1);
+        HttpClientContext localContext = HttpClientContext.create();
+        localContext.setAttribute("count",count);
+
+        HttpGet httpGet = new HttpGet("http://hc.apache.org");
+        for (int i = 0; i < 10; i++) {
+            CloseableHttpResponse r = httpclient.execute(httpGet,localContext);
+            HttpEntity entity = r.getEntity();
+            String s = EntityUtils.toString(entity);
+            System.out.println("请求得到的数据====> "+i+" ====>");
+        }
+    }
+    
+/*    static class GetThread extends Thread{
+        private final CloseableHttpClient httpClient;
+        private final HttpContext context;
+        private final HttpGet httpget;
+
+        public 
+    }*/
+
+
+    /**
+     * 13.Cookie的使用
+     */
+    @Test
+    public void baseUse13(){
+        BasicClientCookie cookie = new BasicClientCookie("name", "value");
+        cookie.setDomain("baidu.com");
+        cookie.setPath("/");
+        cookie.setAttribute(BasicClientCookie.PATH_ATTR,"/");
+    }
+
+
+    /**
+     * 14.FluentAPI
+     */
+    @Test
+    public void baseUse14(){
+    }
 }
+
+
