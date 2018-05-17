@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- Dyy 2018/5/17 16:50 mysql连接器的jar路径-->
+    <classPathEntry location="K:/maven/repo/mysql/mysql-connector-java/5.1.42" />
+    <!-- Dyy 2018/5/17 16:51 配置一个连接环境id是用来标识的 targetRuntime是表示生成的mybatis文件的版本-->
+    <context id="mysql" targetRuntime="MyBatis3">
+
+        <!-- 注释 -->
+        <commentGenerator>
+            <!-- 是否生成注释代时间戳 -->
+            <property name="suppressDate" value="false"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://地址/rccl"
+                        userId=""
+                        password="">
+        </jdbcConnection>
+        <!-- Dyy 2018/5/17 17:01 强制使用BigDecimal来映射Decimal对象否者java会尝试使用Integer float和 double来进行转换-->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true" />
+        </javaTypeResolver>
+
+
+        <!-- Dyy 2018/5/17 17:04 生成model的地方 tagetPackage指定生成到什么包下  ，targetProject指定生成到哪个项目下绝对路径-->
+        <javaModelGenerator targetPackage="_009_MybatisTest.model" targetProject="I:\git-spring-boot-test/src/test/java">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+            <property name="enableSubPackages" value="false" />
+            <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- Dyy 2018/5/17 17:15 生成响应的XML文件-->
+        <sqlMapGenerator targetPackage="_009_MybatisTest.mapper"  targetProject="I:\git-spring-boot-test/src/test/java">
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+
+        <!-- Dyy 2018/5/17 17:14 接口将依赖于生成的XML映射器文件-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="_009_MybatisTest.mapper"  targetProject="I:\git-spring-boot-test/src/test/java">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+
+        <!-- Dyy 2018/5/17 17:17 生成响应的表 -->
+        <!--<table tableName="ALLTYPES"  >
+             设置是不是尝试使用驼峰命名
+            <property name="useActualColumnNames" value="false"/>
+
+            <generatedKey column="ID" sqlStatement="DB2" identity="true" />
+              重写表字段对应关系
+            <columnOverride column="DATE_FIELD" property="startDate" />
+             忽略的字段
+            <ignoreColumn column="FRED" />
+             重写表字段类型
+            <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
+        </table>-->
+        
+        <table tableName="t_paycash_log" enableUpdateByExample="false" enableDeleteByExample="false"
+         enableSelectByExample="false" enableCountByExample="false">
+        </table>
+
+    </context>
+</generatorConfiguration>

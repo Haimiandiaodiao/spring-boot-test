@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="_009_MybatisTest.mapper.TPaycashLogMapper">
+  <resultMap id="BaseResultMap" type="_009_MybatisTest.model.TPaycashLog">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="paycash_sn" jdbcType="VARCHAR" property="paycashSn" />
+    <result column="cash_money" jdbcType="DECIMAL" property="cashMoney" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+    <result column="bank_user" jdbcType="VARCHAR" property="bankUser" />
+    <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
+    <result column="bank_branch_name" jdbcType="VARCHAR" property="bankBranchName" />
+    <result column="province_id" jdbcType="INTEGER" property="provinceId" />
+    <result column="province_name" jdbcType="VARCHAR" property="provinceName" />
+    <result column="city_id" jdbcType="INTEGER" property="cityId" />
+    <result column="city_name" jdbcType="VARCHAR" property="cityName" />
+    <result column="area_id" jdbcType="INTEGER" property="areaId" />
+    <result column="area_name" jdbcType="VARCHAR" property="areaName" />
+    <result column="apply_state" jdbcType="INTEGER" property="applyState" />
+    <result column="apply_time" jdbcType="TIMESTAMP" property="applyTime" />
+    <result column="op_user_id" jdbcType="INTEGER" property="opUserId" />
+    <result column="op_time" jdbcType="TIMESTAMP" property="opTime" />
+    <result column="reject_source" jdbcType="VARCHAR" property="rejectSource" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, paycash_sn, cash_money, user_id, user_type, bank_user, bank_name, bank_branch_name, 
+    province_id, province_name, city_id, city_name, area_id, area_name, apply_state, 
+    apply_time, op_user_id, op_time, reject_source
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_paycash_log
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_paycash_log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="_009_MybatisTest.model.TPaycashLog">
+    insert into t_paycash_log (id, paycash_sn, cash_money, 
+      user_id, user_type, bank_user, 
+      bank_name, bank_branch_name, province_id, 
+      province_name, city_id, city_name, 
+      area_id, area_name, apply_state, 
+      apply_time, op_user_id, op_time, 
+      reject_source)
+    values (#{id,jdbcType=INTEGER}, #{paycashSn,jdbcType=VARCHAR}, #{cashMoney,jdbcType=DECIMAL}, 
+      #{userId,jdbcType=INTEGER}, #{userType,jdbcType=INTEGER}, #{bankUser,jdbcType=VARCHAR}, 
+      #{bankName,jdbcType=VARCHAR}, #{bankBranchName,jdbcType=VARCHAR}, #{provinceId,jdbcType=INTEGER}, 
+      #{provinceName,jdbcType=VARCHAR}, #{cityId,jdbcType=INTEGER}, #{cityName,jdbcType=VARCHAR}, 
+      #{areaId,jdbcType=INTEGER}, #{areaName,jdbcType=VARCHAR}, #{applyState,jdbcType=INTEGER}, 
+      #{applyTime,jdbcType=TIMESTAMP}, #{opUserId,jdbcType=INTEGER}, #{opTime,jdbcType=TIMESTAMP}, 
+      #{rejectSource,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="_009_MybatisTest.model.TPaycashLog">
+    insert into t_paycash_log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="paycashSn != null">
+        paycash_sn,
+      </if>
+      <if test="cashMoney != null">
+        cash_money,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="userType != null">
+        user_type,
+      </if>
+      <if test="bankUser != null">
+        bank_user,
+      </if>
+      <if test="bankName != null">
+        bank_name,
+      </if>
+      <if test="bankBranchName != null">
+        bank_branch_name,
+      </if>
+      <if test="provinceId != null">
+        province_id,
+      </if>
+      <if test="provinceName != null">
+        province_name,
+      </if>
+      <if test="cityId != null">
+        city_id,
+      </if>
+      <if test="cityName != null">
+        city_name,
+      </if>
+      <if test="areaId != null">
+        area_id,
+      </if>
+      <if test="areaName != null">
+        area_name,
+      </if>
+      <if test="applyState != null">
+        apply_state,
+      </if>
+      <if test="applyTime != null">
+        apply_time,
+      </if>
+      <if test="opUserId != null">
+        op_user_id,
+      </if>
+      <if test="opTime != null">
+        op_time,
+      </if>
+      <if test="rejectSource != null">
+        reject_source,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="paycashSn != null">
+        #{paycashSn,jdbcType=VARCHAR},
+      </if>
+      <if test="cashMoney != null">
+        #{cashMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userType != null">
+        #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="bankUser != null">
+        #{bankUser,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null">
+        #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankBranchName != null">
+        #{bankBranchName,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceId != null">
+        #{provinceId,jdbcType=INTEGER},
+      </if>
+      <if test="provinceName != null">
+        #{provinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null">
+        #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="cityName != null">
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="areaId != null">
+        #{areaId,jdbcType=INTEGER},
+      </if>
+      <if test="areaName != null">
+        #{areaName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyState != null">
+        #{applyState,jdbcType=INTEGER},
+      </if>
+      <if test="applyTime != null">
+        #{applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="opUserId != null">
+        #{opUserId,jdbcType=INTEGER},
+      </if>
+      <if test="opTime != null">
+        #{opTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rejectSource != null">
+        #{rejectSource,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="_009_MybatisTest.model.TPaycashLog">
+    update t_paycash_log
+    <set>
+      <if test="paycashSn != null">
+        paycash_sn = #{paycashSn,jdbcType=VARCHAR},
+      </if>
+      <if test="cashMoney != null">
+        cash_money = #{cashMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userType != null">
+        user_type = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="bankUser != null">
+        bank_user = #{bankUser,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null">
+        bank_name = #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankBranchName != null">
+        bank_branch_name = #{bankBranchName,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceId != null">
+        province_id = #{provinceId,jdbcType=INTEGER},
+      </if>
+      <if test="provinceName != null">
+        province_name = #{provinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null">
+        city_id = #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="cityName != null">
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="areaId != null">
+        area_id = #{areaId,jdbcType=INTEGER},
+      </if>
+      <if test="areaName != null">
+        area_name = #{areaName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyState != null">
+        apply_state = #{applyState,jdbcType=INTEGER},
+      </if>
+      <if test="applyTime != null">
+        apply_time = #{applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="opUserId != null">
+        op_user_id = #{opUserId,jdbcType=INTEGER},
+      </if>
+      <if test="opTime != null">
+        op_time = #{opTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rejectSource != null">
+        reject_source = #{rejectSource,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="_009_MybatisTest.model.TPaycashLog">
+    update t_paycash_log
+    set paycash_sn = #{paycashSn,jdbcType=VARCHAR},
+      cash_money = #{cashMoney,jdbcType=DECIMAL},
+      user_id = #{userId,jdbcType=INTEGER},
+      user_type = #{userType,jdbcType=INTEGER},
+      bank_user = #{bankUser,jdbcType=VARCHAR},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      bank_branch_name = #{bankBranchName,jdbcType=VARCHAR},
+      province_id = #{provinceId,jdbcType=INTEGER},
+      province_name = #{provinceName,jdbcType=VARCHAR},
+      city_id = #{cityId,jdbcType=INTEGER},
+      city_name = #{cityName,jdbcType=VARCHAR},
+      area_id = #{areaId,jdbcType=INTEGER},
+      area_name = #{areaName,jdbcType=VARCHAR},
+      apply_state = #{applyState,jdbcType=INTEGER},
+      apply_time = #{applyTime,jdbcType=TIMESTAMP},
+      op_user_id = #{opUserId,jdbcType=INTEGER},
+      op_time = #{opTime,jdbcType=TIMESTAMP},
+      reject_source = #{rejectSource,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
