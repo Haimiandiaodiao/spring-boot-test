@@ -19,6 +19,13 @@
 
     <!--2.添加相应的依赖-->
     <dependencies>
+        <!-- Dyy 2018/5/17 23:13 使用springdata对使用springdate-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.8.7.RELEASE</version>
+        </dependency>
+        
         <!-- Dyy 2018/5/17 16:21 Mybait反向工程代码-->
         <dependency>
             <groupId>org.mybatis.generator</groupId>
@@ -29,7 +36,7 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>2.7.2</version>
+            <version>2.9.0</version>
         </dependency>
 
         <!--2,1添加sprigboot的web依赖-->
