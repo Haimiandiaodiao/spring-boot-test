@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.nio.ByteBuffer;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -74,6 +75,13 @@ public class BaseTest {
         }else{
             System.out.println('\u0000');
         }
+    }
+
+    @Test
+    public void baseUse15(){
+        Object o = null;
+        Integer o1 = (Integer) o;
+        System.out.println(o1);
     }
 
 

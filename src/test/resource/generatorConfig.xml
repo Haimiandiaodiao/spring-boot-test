@@ -18,9 +18,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://地址/rccl"
-                        userId=""
-                        password="">
+                        connectionURL="jdbc:mysql://47.104.207.202:3306/rccl"
+                        userId="root"
+                        password="Root123321">
         </jdbcConnection>
         <!-- Dyy 2018/5/17 17:01 强制使用BigDecimal来映射Decimal对象否者java会尝试使用Integer float和 double来进行转换-->
         <javaTypeResolver>
@@ -61,8 +61,22 @@
             <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
         </table>-->
         
-        <table tableName="t_paycash_log" enableUpdateByExample="false" enableDeleteByExample="false"
-         enableSelectByExample="false" enableCountByExample="false">
+       <!-- <table tableName="t_account" enableUpdateByExample="false" enableDeleteByExample="false"
+            enableSelectByExample="false" enableCountByExample="false">
+        </table>
+
+        <table tableName="t_drive_day_settle" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableCountByExample="false">
+        </table>
+        <table tableName="t_drive_day_settle_detail" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableCountByExample="false">
+        </table>
+        <table tableName="t_driver_temp_income" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableCountByExample="false">
+        </table>-->
+
+        <table tableName="t_driver_temp_income" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableCountByExample="false">
         </table>
 
     </context>
