@@ -1,6 +1,7 @@
 import com.dyy.Modul.Entity.Father;
 import org.junit.Test;
 
+import java.io.File;
 import java.math.BigDecimal;
 import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
@@ -79,9 +80,8 @@ public class BaseTest {
 
     @Test
     public void baseUse15(){
-        Object o = null;
-        Integer o1 = (Integer) o;
-        System.out.println(o1);
+        File file = new File("/");
+        System.out.println(file);
     }
 
 

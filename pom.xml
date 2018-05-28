@@ -19,6 +19,19 @@
 
     <!--2.添加相应的依赖-->
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <!-- Dyy 2018/5/22 22:18 使用RabbitMQ Client来进行mq的操作-->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>4.2.1</version>
+        </dependency>
+
         <!-- Dyy 2018/5/17 23:13 使用springdata对使用springdate-->
         <dependency>
             <groupId>org.springframework.data</groupId>

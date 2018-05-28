@@ -18,9 +18,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL=""
+                        connectionURL="jdbc:mysql://47.104.207.202:3306/rccl"
                         userId="root"
-                        password="">
+                        password="Root123321">
         </jdbcConnection>
         <!-- Dyy 2018/5/17 17:01 强制使用BigDecimal来映射Decimal对象否者java会尝试使用Integer float和 double来进行转换-->
         <javaTypeResolver>
@@ -29,7 +29,7 @@
 
 
         <!-- Dyy 2018/5/17 17:04 生成model的地方 tagetPackage指定生成到什么包下  ，targetProject指定生成到哪个项目下绝对路径-->
-        <javaModelGenerator targetPackage="_009_MybatisTest.model" targetProject="I:\git-spring-boot-test/src/test/java">
+        <javaModelGenerator targetPackage="_009_MybatisTest.model" targetProject="C:\">
             <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
             <property name="enableSubPackages" value="false" />
             <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
@@ -37,12 +37,12 @@
         </javaModelGenerator>
 
         <!-- Dyy 2018/5/17 17:15 生成响应的XML文件-->
-        <sqlMapGenerator targetPackage="_009_MybatisTest.mapper"  targetProject="I:\git-spring-boot-test/src/test/java">
+        <sqlMapGenerator targetPackage="_009_MybatisTest.mapper"  targetProject="C:\">
             <property name="enableSubPackages" value="false" />
         </sqlMapGenerator>
 
         <!-- Dyy 2018/5/17 17:14 接口将依赖于生成的XML映射器文件-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="_009_MybatisTest.mapper"  targetProject="I:\git-spring-boot-test/src/test/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="_009_MybatisTest.mapper"  targetProject="C:\">
             <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
