@@ -1,6 +1,5 @@
 package _010_RabbitmqTest;
 
-import ch.qos.logback.core.encoder.EchoEncoder;
 import com.rabbitmq.client.*;
 import com.rabbitmq.client.Address;
 import com.rabbitmq.client.MessageProperties;
@@ -8,19 +7,11 @@ import org.junit.Test;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
-import org.springframework.amqp.rabbit.core.RabbitGatewaySupport;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
-import org.springframework.amqp.rabbit.support.CorrelationData;
-import org.springframework.amqp.support.converter.MessageConversionException;
-import org.springframework.amqp.support.converter.MessageConverter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
 import org.springframework.retry.backoff.ExponentialBackOffPolicy;
 import org.springframework.retry.support.RetryTemplate;
-import sun.plugin.com.ParameterListCorrelator;
 
-import javax.swing.plaf.basic.BasicRadioButtonMenuItemUI;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
