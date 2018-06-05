@@ -179,6 +179,8 @@ public class _006_SockBase {
         OutputStream out = s.getOutputStream();
         out.write("hello ".getBytes());
         out.write("everyone".getBytes());
+        int trafficClass = s.getTrafficClass();
+        System.out.println(trafficClass);
         Thread.sleep(60000);
         s.close();
     }
