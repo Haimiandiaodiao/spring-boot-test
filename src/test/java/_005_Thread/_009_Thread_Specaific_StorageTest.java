@@ -11,6 +11,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
 /**
+ * 线程存储的使用
  * 1.使用ThreadLocal来完线程日志的错误
  * 是用ThreadLocal来完成对每个线程特有对象的记录的工作
  * ThreadLocal的key对象的就是线程的。
