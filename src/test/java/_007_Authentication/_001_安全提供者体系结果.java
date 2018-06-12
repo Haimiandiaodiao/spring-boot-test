@@ -1,29 +1,26 @@
 package _007_Authentication;
 
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.org.apache.xml.internal.resolver.helpers.PublicId;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.codec.digest.HmacUtils;
-import org.bouncycastle.util.encoders.Base64;
+//import org.bouncycastle.util.encoders.Base64;
 import org.junit.Test;
+
 import javax.crypto.*;
 import javax.crypto.interfaces.DHPublicKey;
-import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.DHParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import javax.net.ssl.*;
+import javax.net.ssl.KeyManager;
+import javax.net.ssl.KeyManagerFactory;
+import javax.net.ssl.SSLContext;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.*;
-import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
-import java.security.spec.RSAPrivateKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Arrays;
 import java.util.Properties;
@@ -88,11 +85,11 @@ public class _001_安全提供者体系结果 {
      */
     @Test
     public void baseUse5() throws UnsupportedEncodingException {
-        String inputStr= "Java加密与解密的艺术";
-        byte[] encode = Base64.encode(inputStr.getBytes("utf-8"));
-        System.out.println(new String(encode,"utf-8"));
-        byte[] decode = Base64.decode(encode);
-        System.out.println(new String(decode,"utf-8"));
+//        String inputStr= "Java加密与解密的艺术";
+//        byte[] encode = Base64.encode(inputStr.getBytes("utf-8"));
+//        System.out.println(new String(encode,"utf-8"));
+//        byte[] decode = Base64.decode(encode);
+//        System.out.println(new String(decode,"utf-8"));
     }
 
 

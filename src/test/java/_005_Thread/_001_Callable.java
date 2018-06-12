@@ -8,8 +8,7 @@ import java.util.concurrent.*;
 /**
  * 新的多线程的应用
  * @auther Dyy
- * @create 2018/2/8
- */
+ * @create 2018/2/8 */
 public class _001_Callable {
 
     /**
@@ -24,10 +23,10 @@ public class _001_Callable {
         FindMaxTask task2 = new FindMaxTask(data, data.length / 2, data.length);
 
 
-        ExecutorService service = Executors.newFixedThreadPool(2);
-        Future<Integer> submit = service.submit(task1);
-        Future<Integer> submit1 = service.submit(task2);
-        System.out.println(Integer.max(submit1.get(), submit.get()));
+//        ExecutorService service = Executors.newFixedThreadPool(2);
+//        java.util.concurrent.Future<Integer> submit = service.submit(task1);
+//        Future submit1 = service.submit(task2);
+//        System.out.println(Integer.max(submit1.get(), submit.get()));get
     }
 
 
