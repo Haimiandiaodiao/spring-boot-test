@@ -1,5 +1,6 @@
 package _007_Authentication;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
 //import org.bouncycastle.util.encoders.Base64;
 import org.junit.Test;
@@ -299,11 +300,22 @@ public class _001_安全提供者体系结果 {
         Cipher rsa2 = Cipher.getInstance("RSA");
         rsa2.init(Cipher.ENCRYPT_MODE,privateKey);
         byte[] bytes = rsa2.doFinal("Dyy".getBytes("UTF-8"));
-
+        System.out.println("私钥加密之后的密文："+new String(Base64.encodeBase64(bytes)));
 
         rsa2.init(Cipher.DECRYPT_MODE,aPublic);
         byte[] bytes1 = rsa2.doFinal(bytes);
-        System.out.println(new String (bytes1));
+        System.out.println("公钥解密之后的内容："+new String (bytes1));
+
+        //===========================使用公钥加密  私钥解密======================
+
+        Cipher cipher = Cipher.getInstance("RSA");
+        cipher.init(Cipher.ENCRYPT_MODE,aPublic);//公钥
+        byte[] bytes2 = cipher.doFinal("我是公钥加密的内容".getBytes());
+        System.out.println("公钥加密的内容："+Base64.encodeBase64String(bytes2));
+
+        cipher.init(Cipher.DECRYPT_MODE,aPrivate);//私钥
+        System.out.println("私钥解密之后的内容："+new String(cipher.doFinal(bytes2)));
+
 
         SSLContext context = SSLContext.getInstance("SSL");
 

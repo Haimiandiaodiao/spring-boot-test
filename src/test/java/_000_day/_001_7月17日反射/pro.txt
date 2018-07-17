@@ -1,0 +1,3 @@
+#这个是属性文件
+className = _000_day._001_7月17日反射.Student
+methodName = show

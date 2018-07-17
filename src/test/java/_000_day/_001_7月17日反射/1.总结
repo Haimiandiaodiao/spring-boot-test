@@ -1,0 +1,21 @@
+1.使用带有declaredFields的反射获得全部属性的时候是不能显出来  继承父类的共有属性  ，但是使用getFields 可以显出出来 继承父类的属性
+
+2.子类可以看到父类的 默认  public protected 的属性
+
+3.不带Declared的方法只可以得到父类的和自己的public的属性虽然 可以子类可以看到 protected 和 默认 安全级别的属性，但是反射不出来
+
+4.带有declared的方法只能看到自己的所有属性和方法，但是看不到继承父类的。
+
+5.在反射中调用static方法的时候执行时用额invoke方法第一个参数可以为空
+
+6.使用反射可以绕过范型检测
+
+7.在Java的反射技术中，通过Method和Field对象很容易就可以取出泛型类型的具体类型。但是普通类的泛型参数在编译期会被擦除，
+  比如定义了一个List<String>对象，在运行期我们可以拿到的信息就只剩下List，并不知道List中的元素类型是什么
+  这也说明了，为什么fun(List<String> list)和 fun(List<Integer>)会被编译器认为是相同的函数。
+
+8.通过反射获得的属性或方法，之后可以通过genericType获得范型。
+
+9.使用完getGenericSuperclass 获得完type之后要将type转换成parametersized来获得父类的类型
+
+10.抽取通用Dao在父类上写通用方法获得相应的类型

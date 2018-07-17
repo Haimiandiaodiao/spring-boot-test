@@ -85,4 +85,33 @@ public class BaseTest {
     }
 
 
+    @Test
+    public void name() {
+        for (int i = 0; i==0; i++) {
+            System.out.println("是否进来了");
+        }
+        System.out.println("ss");
+    }
+
+
+    @Test
+    public void memory() {
+        System.out.println("TotalMemory：" + (Runtime.getRuntime().totalMemory()/(1024*1024) + "M"));
+
+        System.out.println("Max Memory ：" + (Runtime.getRuntime().maxMemory()/(1024*1024) + "M"));
+
+        System.out.println("Free Memory ：" + (Runtime.getRuntime().freeMemory()/(1024*1024) + "M"));
+    }
+
+
+    @Test
+    public void aa(){
+        String a= "      \r\n  \\\\\\\\\\\\\\";
+        String commonsLineLines ="^\\s*(\\\\).*";
+        System.out.println(a.matches(commonsLineLines));
+    }
+
+
+
+
 }

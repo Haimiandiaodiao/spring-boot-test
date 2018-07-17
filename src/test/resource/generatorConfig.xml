@@ -18,9 +18,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://47.104.207.202:3306/rccl"
-                        userId="root"
-                        password="Root123321">
+                        connectionURL="jdbc:mysql://47.104.207.202:3306/"
+                        userId=""
+                        password="">
         </jdbcConnection>
         <!-- Dyy 2018/5/17 17:01 强制使用BigDecimal来映射Decimal对象否者java会尝试使用Integer float和 double来进行转换-->
         <javaTypeResolver>
