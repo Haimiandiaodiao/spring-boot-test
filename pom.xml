@@ -19,6 +19,12 @@
 
     <!--2.添加相应的依赖-->
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.5</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
