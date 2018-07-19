@@ -22,4 +22,12 @@ public class 测试注解 {
         System.out.println(annotation.name());
         System.out.println(annotation.shoole());
     }
+
+    @Test
+    public void 查看继承会不会继承() {
+        Class<TestClass2> calss = TestClass2.class;
+        boolean annotationPresent = calss.isAnnotationPresent(AnnotaionTest.class);
+        System.out.println(annotationPresent);
+        //注释掉@Inherited 就不会有继承
+    }
 }

@@ -52,7 +52,7 @@
   【3】自定以注解里面只有 一个 value字段的话 在赋值的时候就可以省略 属性名
 
 3.JDK自带的注解
-   @Deparcated 过时的
+   @Deprecated 过时的
    @Override 复写
    @SuppressWarnings 阻止警告
     等等一些注解

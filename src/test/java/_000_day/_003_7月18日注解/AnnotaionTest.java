@@ -1,9 +1,6 @@
 package _000_day._003_7月18日注解;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * @Author Dyy <br/>
@@ -12,6 +9,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
+//@Inherited
 public @interface AnnotaionTest {
     String name();
     int age();
