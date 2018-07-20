@@ -107,7 +107,7 @@ public class 测试代理的 {
         System.out.println(sampleBean.getValue());
 
         sampleBean.setValue("11111");
-
+        System.out.println(sampleBean instanceof SampleBean);
     }
 
     @Test
