@@ -1,4 +1,4 @@
-package _007_Authentication;
+package _000_day._004_7月20号安全认证;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.tomcat.jni.Proc;
@@ -31,14 +31,12 @@ public class _002_自己理解安全体系 {
         Provider my = new Provider("Dyy", 1.0, "6666") {
         };
         Security.addProvider(my);
-
         Security.insertProviderAt(my,0);
         System.out.println("===================");
         Provider[] providers2 = Security.getProviders();
         for (Provider provider : providers2) {
             System.out.println(provider.getName()+"===>"+provider.getVersion());
         }
-
         System.out.println("====>"+Security.getProvider("Dyy"));
     }
 
@@ -46,12 +44,14 @@ public class _002_自己理解安全体系 {
     public void baseUse2() throws NoSuchAlgorithmException, IOException {
         byte[] bytes = "MD5 Digest".getBytes();
         MessageDigest md5 = MessageDigest.getInstance("MD5");
-        ByteArrayInputStream is = new ByteArrayInputStream(bytes);
-
-        DigestInputStream dis = new DigestInputStream(is, md5);
-        int read = dis.read(bytes, 0, bytes.length);
-        byte[] digest = dis.getMessageDigest().digest();
-        System.out.println(Arrays.toString(digest));
+        MessageDigest sha = MessageDigest.getInstance("SHA");
+        MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
+        md5.update(bytes);
+        sha.update(bytes);
+        sha256.update(bytes);
+        System.out.println(new String(md5.digest()));
+        System.out.println(new String(sha.digest()));
+        System.out.println(new String(sha256.digest()));
     }
 
 
