@@ -58,6 +58,13 @@
             <version>2.9.0</version>
         </dependency>
 
+        <!-- Dyy 2018/7/30 下午8:50 session二进制协议-->
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>4.0.38</version>
+        </dependency>
+
         <!--2,1添加sprigboot的web依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -102,6 +109,7 @@
             <artifactId>joda-time</artifactId>
             <version>2.9.7</version>
         </dependency>
+        <!-- Dyy 2018/7/27 下午10:20 间接的将commons-codec引入来完成加密解密的操作-->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>

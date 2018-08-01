@@ -1,17 +1,24 @@
 package _000_day._004_7月20号安全认证;
 
+import com.dyy.Modul.Entity.Father;
 import org.apache.commons.codec.binary.Base64;
-import org.apache.tomcat.jni.Proc;
 import org.junit.Test;
-import sun.security.rsa.RSAPrivateKeyImpl;
+import sun.security.ssl.ProtocolVersion;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.Serializable;
+import javax.net.SocketFactory;
+import javax.net.ssl.*;
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.Socket;
+import java.net.URL;
+import java.net.URLConnection;
 import java.security.*;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
-import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @Author Dyy <br/>
@@ -108,5 +115,190 @@ public class _002_自己理解安全体系 {
         System.out.println("______________>验证"+verify);//验证为false的
 
 
+
     }
+
+
+    @Test
+    public void DigestInputStream数据流输入() throws NoSuchAlgorithmException, KeyStoreException, IOException, CertificateException, UnrecoverableKeyException {
+        KeyManagerFactory sunX509 = KeyManagerFactory.getInstance("SunX509");
+        KeyStore jks = KeyStore.getInstance("JKS");
+        jks.load(new FileInputStream("/Users/dyy/Documents/MyZone/aKey111.keystore"),"123456".toCharArray());
+
+        KeyManagerFactory sunX5091 = KeyManagerFactory.getInstance("SunX509");
+        sunX5091.init(jks,"123456".toCharArray());
+        KeyManager[] keyManagers = sunX5091.getKeyManagers();
+
+        TrustManagerFactory sunX5092 = TrustManagerFactory.getInstance("SunX509");
+        sunX5092.init(jks);
+        TrustManager[] trustManagers = sunX5092.getTrustManagers();
+
+
+        Certificate baidu = jks.getCertificate("baidu");
+
+        SocketFactory d = SSLSocketFactory.getDefault();
+    }
+
+
+    @Test
+    public void 获得百度的Https链接证书() throws Exception {
+        KeyStore jks = KeyStore.getInstance("JKS");
+        FileInputStream fileInputStream = new FileInputStream("/Users/dyy/Documents/MyZone/aKey.keystore");
+        jks.load(fileInputStream,"123456".toCharArray());
+        fileInputStream.close();
+        SocketFactory aDefault = SSLSocketFactory.getDefault();
+        SSLSocket socket = (SSLSocket) aDefault.createSocket("www.baidu.com", 443);
+        socket.startHandshake();
+        SSLSession session = socket.getSession();
+        Certificate[] peerCertificates = session.getPeerCertificates();
+        jks.setCertificateEntry("baidu",peerCertificates[0]);
+
+        FileOutputStream fileOutputStream = new FileOutputStream("/Users/dyy/Documents/MyZone/aKey111.keystore");
+        jks.store(fileOutputStream,"123456".toCharArray());
+        fileInputStream.close();
+    }
+
+
+    @Test
+    public void 构建SSlContext上下文() throws NoSuchAlgorithmException, KeyManagementException, IOException {
+        SSLContext sun = SSLContext.getInstance("TLSv1.2");
+    X509TrustManager myTrust = new X509TrustManager() {
+        @Override
+        public void checkClientTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
+        }
+
+        @Override
+        public void checkServerTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
+        }
+
+        @Override
+        public X509Certificate[] getAcceptedIssuers() {
+            return new X509Certificate[0];
+        }
+    };
+        sun.init(null,new TrustManager[]{myTrust},null);
+
+    String protocol = sun.getProtocol();
+    Provider provider = sun.getProvider();
+        System.out.println("==>协议："+protocol);
+        System.out.println("==>提供者"+provider.getName());
+    //===================================看一下默认提供的是什么
+    SSLContext aDefault = SSLContext.getDefault();
+        System.out.println("==>默认协议："+aDefault.getProtocol());
+        System.out.println("==>默认提供者："+aDefault.getProvider().getName());
+
+    String host ="book.douban.com";
+    SSLSocketFactory socketFactory = sun.getSocketFactory();
+    SSLSocket socket = (SSLSocket) socketFactory.createSocket(host, 443);
+
+        socket.startHandshake();//握手
+    String[] supportedProtocols = socket.getSupportedProtocols();
+        System.out.println("==========服务器支持的协议");
+        for (String tmp : supportedProtocols) {
+        System.out.println(tmp);
+    }
+
+    SSLSession session = socket.getSession();
+    String cipherSuite = session.getCipherSuite();
+    Certificate[] peerCertificates = session.getPeerCertificates();//获得远程的证书
+    Certificate[] localCertificates = session.getLocalCertificates();//获得本地证书
+
+
+    OutputStreamWriter out = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");
+    //https在Get行中需要完成URL
+        out.write("GET https://"+host+"/ HTTP/1.1\r\n");
+        out.write("Host: "+host+ "\r\n");
+        out.write("\r\n");
+        out.flush();
+    //获得网页的内容
+    boolean connected = socket.isConnected();
+    InputStream inputStream = socket.getInputStream();
+    InputStreamReader in = new InputStreamReader(inputStream);
+    BufferedReader reader = new BufferedReader(in);
+    String tmp;
+//        while ((tmp = reader.readLine()) != null){
+//            System.out.println(tmp);
+//        }
+
+
+
+
+
+    //返回内容的长度
+    int length = Integer.MAX_VALUE;
+    //读取首部
+    String s;
+        while (!(s = reader.readLine()).equals("")){
+        int postitn = s.toLowerCase().indexOf("length");
+        if(postitn != -1){
+            //获得返回内容的长度
+            String substring = s.substring(postitn + 7, s.length()).trim();
+            length = Integer.parseInt(substring);
+        }
+
+        System.out.println(s);
+    }
+        System.out.println();
+
+        System.out.println("内容的长度:"+length);
+
+    int c ;
+    int i = 0;
+        while ((c = inputStream.read()) != -1 && i++ < length){
+        System.out.print((char) c);
+        System.out.print("==》"+i);
+    }
+        socket.close();
+}
+
+    @Test
+    public void 获得百度安全网页() throws IOException {
+        URL url = new URL("https://www.baidu.com/");
+        HttpsURLConnection urlConnection = (HttpsURLConnection)url.openConnection();
+        String cipherSuite = urlConnection.getCipherSuite();
+
+    }
+
+
+    @Test
+    public void 使用HttpsurlConnection来进行链接的操作() throws IOException, NoSuchAlgorithmException, KeyManagementException {
+        SSLContext sun = SSLContext.getInstance("TLSv1.2");
+        X509TrustManager myTrust = new X509TrustManager() {
+            @Override
+            public void checkClientTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
+            }
+
+            @Override
+            public void checkServerTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
+            }
+
+            @Override
+            public X509Certificate[] getAcceptedIssuers() {
+                return new X509Certificate[0];
+            }
+        };
+        sun.init(null,new TrustManager[]{myTrust},null);
+
+
+        SSLContext instance = SSLContext.getInstance("TLSv1.2");  //设置安全链接上下文
+        instance.init(null,new TrustManager[]{myTrust},null);//初始化安全链接上下文
+        SSLSocketFactory socketFactory = instance.getSocketFactory();//获得socketFactory工厂创建socket
+
+
+        URL url = new URL("https://www.baidu.com/");
+        HttpsURLConnection urlConnection = (HttpsURLConnection)url.openConnection();//获得链接实例
+        urlConnection.setDoInput(true);//打开输出流
+        urlConnection.setDoOutput(true);//打开输入流
+        urlConnection.setSSLSocketFactory(socketFactory);//设置工厂信息
+        urlConnection.connect();//连接到服务器
+
+
+        Certificate[] serverCertificates = urlConnection.getServerCertificates();//获得服务器的证书
+        Certificate[] localCertificates = urlConnection.getLocalCertificates();//获得发到服务器的证书
+        
+
+    }
+
+
+
 }
