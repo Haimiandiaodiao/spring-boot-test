@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Arrays;
 
 /**
  * @Author Dyy <br/>
@@ -40,6 +41,9 @@ public class 测试代理的 {
         String s = o.show1();
         System.out.println(s);
         o.show2();
+
+        boolean proxyClass = Proxy.isProxyClass(o.getClass());
+        System.out.println(proxyClass);
     }
 
 

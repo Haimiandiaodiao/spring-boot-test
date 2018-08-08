@@ -6,7 +6,9 @@ import com.dyy.Modul.Entity.Father;
 import org.junit.Test;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * @Author Dyy <br/>
@@ -32,6 +34,9 @@ public class _001_序列化基本操作 {
         ByteArrayInputStream in = new ByteArrayInputStream(bytes1);
         ObjectInputStream objin = new ObjectInputStream(in);
         Father father1 = (Father) objin.readObject();
+
+        HashMap map = new HashMap();
+        Object put = map.put("aaa", "aaa");
     }
 
 
@@ -69,9 +74,6 @@ public class _001_序列化基本操作 {
         System.out.println(father1);
         System.out.println(s);
     }
-
-
-
 
 
 }
