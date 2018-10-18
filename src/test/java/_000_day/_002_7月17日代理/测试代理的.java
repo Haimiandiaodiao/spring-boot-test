@@ -1,13 +1,17 @@
 package _000_day._002_7月17日代理;
 
+import com.dyy.Modul.Entity.Son;
 import net.sf.cglib.beans.*;
 import net.sf.cglib.proxy.*;
 import org.junit.Test;
+import org.springframework.context.annotation.Bean;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author Dyy <br/>
@@ -177,6 +181,17 @@ public class 测试代理的 {
         System.out.println(sampleBean2);
     }
 
+    @Test
+    public void 将map转化成对象(){
+        Son son = new Son();
+        Map<String,Object> map = new HashMap<>();
+        map.put("name","Dyyu");
+        map.put("age","11");
+        BeanMap beanMap = BeanMap.create(son);
+        beanMap.putAll(map);
+
+        System.out.println(son);
+    }
     @Test
     public void 将多个对象整合到一对象中() {
         MixinTest mixinTest = new MixinTest();

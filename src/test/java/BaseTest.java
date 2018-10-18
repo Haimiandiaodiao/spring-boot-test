@@ -1,11 +1,15 @@
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.dyy.Modul.Entity.Father;
 import org.junit.Test;
 
 import java.io.File;
 import java.math.BigDecimal;
-import java.nio.ByteBuffer;
-import java.text.SimpleDateFormat;
+import java.time.ZonedDateTime;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 /**
  * 基础的一些测试
@@ -111,7 +115,76 @@ public class BaseTest {
         System.out.println(a.matches(commonsLineLines));
     }
 
+    @Test
+    public void show(){
+        ZonedDateTime now = ZonedDateTime.now();
+        ZonedDateTime tenDayAgo = now.plusMinutes(-1*10);
+
+        System.out.println("当前的时间"+now.toString());
+        System.out.println("十分钟之前"+tenDayAgo.toString());
+    }
+
+    //4.反转一个英文句子
+    public static void main(String[] args) {
+        String term = "StudentNameAge";
+        StringBuffer sb = new StringBuffer(term);
+
+    }
+
+    @Test
+    public void show2(){
+        List<String> l = new ArrayList<>();
+        l.add("a");
+        l.add("b");
+        l.add("c");
+        l.add("d");
+
+        String s = JSON.toJSONString(l);
+
+        List<String> parse = (List<String>) JSONArray.parse(s);
+        List<Integer> list = JSON.parseObject(s, List.class);
+        System.out.println(parse);
+
+    }
 
 
+    @Test
+    public void formatJson(){
+//        {"code":"${CODE}"}
+        Map info = new HashMap();
+        info.put("code","dYY");
 
+        String s = JSON.toJSONString(info);
+        System.out.println(s);
+        String s1 = JSON.toJSONString(s);
+        System.out.println(s1);
+
+    }
+
+    @Test
+    public void split(){
+        String phone = "16612345678";
+            String regex = "^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(166)|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9]))\\d{8}$";
+            if (phone.length() != 11) {
+                System.out.println(false);
+            } else {
+                Pattern p = Pattern.compile(regex);
+                Matcher m = p.matcher(phone);
+                boolean isMatch = m.matches();
+
+                if (!isMatch) {
+                   System.out.println(false);
+                }
+                   System.out.println(true);
+
+            }
+
+    }
+
+    @Test
+    public void replace(){
+        String ss="\"{\\\"code\\\":\\\"${CODE}\\\"}\"";
+        String s = ss.replaceAll("\\$\\{CODE\\}", "13456789");
+        System.out.println(s);
+    }
 }

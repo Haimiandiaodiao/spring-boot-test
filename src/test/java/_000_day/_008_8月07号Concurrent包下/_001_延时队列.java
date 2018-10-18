@@ -1,6 +1,5 @@
 package _000_day._008_8月07号Concurrent包下;
 
-import com.mysql.jdbc.jdbc2.optional.SuspendableXAConnection;
 import org.junit.Test;
 
 import java.util.HashMap;

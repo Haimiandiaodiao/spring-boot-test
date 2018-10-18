@@ -19,6 +19,11 @@
 
     <!--2.添加相应的依赖-->
     <dependencies>
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>2.8.3</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/cglib/cglib -->
         <dependency>
             <groupId>cglib</groupId>
@@ -86,7 +91,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.42</version>
+            <version>5.1.34</version>
         </dependency>
         <dependency>
             <groupId>com.oracle</groupId>
@@ -98,6 +103,12 @@
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.3</version>
+        </dependency>
+        <!-- swagger -->
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>1.6.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>

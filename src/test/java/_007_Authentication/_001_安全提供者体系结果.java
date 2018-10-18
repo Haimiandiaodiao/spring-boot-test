@@ -1,5 +1,6 @@
 package _007_Authentication;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.digest.DigestUtils;
 //import org.bouncycastle.util.encoders.Base64;
@@ -16,6 +17,7 @@ import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
 import java.security.*;
 import java.security.cert.X509Certificate;
 import java.security.interfaces.RSAPrivateKey;
@@ -24,6 +26,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Properties;
 
 public class _001_安全提供者体系结果 {
@@ -70,15 +73,25 @@ public class _001_安全提供者体系结果 {
      */
     @Test
     public void baseUse4() throws NoSuchAlgorithmException, IOException {
-        byte[] input = "Dyy".getBytes();
+        byte[] input = "贵人通".getBytes();
         MessageDigest md = MessageDigest.getInstance("MD5");
         //构建DigestInputStream对象
-        DigestInputStream dis = new DigestInputStream(new ByteArrayInputStream(input), md);
+        md.update(input);
+        byte[] digest = md.digest();
+//       System.out.println(new BigInteger(1, digest).toString(16));
+        for (byte b : digest) {
+            //现状换成无符号int在将其转换成16进制数
+            System.out.print(Integer.toString(Byte.toUnsignedInt(b),16));
+        }
 
-        dis.read(input,0,input.length);
-        byte[] digest = dis.getMessageDigest().digest();
-        dis.close();
-        System.out.println(Arrays.toString(digest));
+//        DigestInputStream dis = new DigestInputStream(new ByteArrayInputStream(input), md);
+//
+//        dis.read(input,0,input.length);
+//        byte[] digest = dis.getMessageDigest().digest();
+//        dis.close();
+//        System.out.println(Arrays.toString(digest));
+//        System.out.println(Base64.encodeBase64String(digest));
+//        System.out.println(new String(digest));
     }
 
     /**
@@ -329,16 +342,32 @@ public class _001_安全提供者体系结果 {
     @Test
     public void  baseUse13() throws Exception {
         KeyStore ks = KeyStore.getInstance(KeyStore.getDefaultType());
-        FileInputStream is = new FileInputStream("C:\\Users\\Dyy\\Dyy1.keystore");
-        ks.load(is,"123456".toCharArray());
+        FileInputStream is = new FileInputStream("H:\\server.jks");
+        ks.load(is,"seekkey".toCharArray());
         is.close();
-        PrivateKey key = (PrivateKey) ks.getKey("www.Dyy1.org", "123456".toCharArray());
+        PrivateKey key = (PrivateKey) ks.getKey("seekkey", "seeker".toCharArray());
         System.out.println("私钥是："+ org.apache.commons.codec.binary.Base64.encodeBase64String(key.getEncoded()));
 
         //获得证书来获得公钥
-        X509Certificate certificate = (X509Certificate)ks.getCertificate("www.Dyy1.org");
+        X509Certificate certificate = (X509Certificate)ks.getCertificate("seekkey");
         PublicKey publicKey = certificate.getPublicKey();
         System.out.println("公钥是："+ org.apache.commons.codec.binary.Base64.encodeBase64String(publicKey.getEncoded()));
+
+        Cipher rsa2 = Cipher.getInstance("RSA");
+        rsa2.init(Cipher.ENCRYPT_MODE, publicKey);
+        byte[] bytes = rsa2.doFinal("guirentong".getBytes("UTF-8"));
+        System.out.println("私钥加密之后的密文："+new String(Base64.encodeBase64(bytes)));
+
+        rsa2.init(Cipher.DECRYPT_MODE,key);
+        byte[] bytes2 = Base64.decodeBase64("p1S5jbnq2kN0/3cUVZFNZZ0KhY3BhaLVQL6f5gg/GP0WcUwiu5EJQRgIx5iABIUxeONr86zXpnVuWHPPxqyZk2Y60MmYiNYhmr7qxz7MFOrf7+LXOguP4WAXe9li4/ab4Jo75JQC5zQuR6H2dRPnuyE0gBuwp1we5KOfkUHvGrrgk8MnkTxRX0h5jNwhNmN4jlqtzjNPqIZDwQ9XuKZ3b6ZLvm6HoLKbkdqhiYbCui0knwozzRy8e/coRO2u8vgecm205ruvPTxNJR3fzrJpIfLVJG64XHF1hEpuK5c6JUVjC4U0kkoYeLo2NVbw2FYmBlkg3uB8o9epHBR2NTdscQ==");
+
+        byte[] bytes1 = rsa2.doFinal(bytes);
+        System.out.println("公钥解密之后的内容："+new String (bytes1));
+
+        //===========================使用公钥加密  私钥解密=============
+        System.out.println("======?"+new String(bytes));
+
+        System.out.println("私钥加密之后的密文："+new String(Base64.encodeBase64(bytes)));
 
 
         KeyStore ks1 = KeyStore.getInstance(KeyStore.getDefaultType());
@@ -371,4 +400,6 @@ public class _001_安全提供者体系结果 {
         SSLContext ssl = SSLContext.getInstance("SSL");
 
     }
+
+
 }

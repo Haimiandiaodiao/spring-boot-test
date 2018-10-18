@@ -45,6 +45,7 @@ public class Ch522Application {
         Set<Map.Entry<String, String[]>> entries = parameterMap.entrySet();
         for (Map.Entry<String, String[]> entry : entries) {
             System.out.println(entry.getKey()+"===>"+entry.getValue());
+
         }
 
         Enumeration<String> headerNames = request.getHeaderNames();

@@ -1,10 +1,14 @@
 package _002_ThirdProjectTestPackage;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.dyy.Modul.Entity.Son;
 import org.junit.Test;
+import springfox.documentation.spring.web.json.Json;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -34,6 +38,26 @@ public class _004_FastJsonTest {
 
     @Test
     public void baseUser2(){
+        LinkedHashMap<Object, Object> map = new LinkedHashMap<>();
+        map.put("validUser",null);
+        map.put("personConsume",null);
+        map.put("teamConsume",null);
+        map.put("updateTo",2);
+        map.put("canUse",0);
 
+        String s = JSON.toJSONString(map, SerializerFeature.WriteMapNullValue);
+
+        LinkedHashMap linkedHashMap = JSON.parseObject(s, map.getClass());
+
+        System.out.println(s);
+    }
+
+    @Test
+    public void 测试自定义Seriablizer(){
+        JsonTestInsert entity = new JsonTestInsert(11,"dd",new Date());
+        String s = JSON.toJSONString(entity);
+        System.out.println(s);
+        JsonTestInsert jsonTestInsert = JSON.parseObject(s, JsonTestInsert.class);
+        System.out.println(jsonTestInsert);
     }
 }

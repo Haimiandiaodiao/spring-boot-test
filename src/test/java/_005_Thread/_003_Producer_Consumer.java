@@ -1,14 +1,7 @@
 package _005_Thread;
 
 import org.junit.Test;
-import org.omg.PortableServer.THREAD_POLICY_ID;
-import org.springframework.web.context.request.NativeWebRequest;
-import sun.tools.jconsole.Tab;
-import sun.util.resources.cldr.nso.CurrencyNames_nso;
 
-import javax.security.auth.login.AccountNotFoundException;
-import javax.swing.plaf.ToolBarUI;
-import java.util.LinkedList;
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
