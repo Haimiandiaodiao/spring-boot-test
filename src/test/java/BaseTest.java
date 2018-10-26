@@ -187,4 +187,45 @@ public class BaseTest {
         String s = ss.replaceAll("\\$\\{CODE\\}", "13456789");
         System.out.println(s);
     }
+
+
+    @Test
+    public void baseTest(){
+        char c = '我';
+        String hex = "0123456789ABCDEF";
+        char[] tmp = new char[]{'\\', 'u', '\u0000', '\u0000', '\u0000', '\u0000'};
+
+        for(int i = 0; i < 4; ++i) {
+            tmp[5 - i] = hex.charAt(c & 15);
+            c = (char)(c >> 4);
+        }
+
+        System.out.println(String.copyValueOf(tmp)) ;
+    }
+
+
+    @Test
+    public void  testBigDecimal(){
+        BigDecimal profit = new BigDecimal("0");
+        BigDecimal price = new BigDecimal("-1");
+        //校验反润比例
+        if(profit == null ){
+            throw new RuntimeException("反润比例不能为空");
+        }
+        if(profit.compareTo(BigDecimal.ZERO) < 0){
+            throw new RuntimeException("反润比例不能小于0");
+
+        }
+        //校验商品价钱
+        if(price == null){
+            throw new RuntimeException("商品价钱不能为空");
+        }
+
+        if(price.compareTo(BigDecimal.ZERO) <= 0){
+            throw new RuntimeException("商品价钱必须大于零");
+        }
+    }
 }
+
+
+

@@ -23,4 +23,7 @@ public class JsonTestInsert {
 
     @JSONField(serializeUsing = FastJsonDateToLongConverter.class,deserializeUsing =FastJsonDateToLongConverter.class )
     private Date create;
+
+    @JSONField(serializeUsing = FastJsonLongToStringConverter.class,deserializeUsing = FastJsonLongToStringConverter.class )
+    private Long  sysId;
 }
