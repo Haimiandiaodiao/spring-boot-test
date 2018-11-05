@@ -3,6 +3,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.dyy.Modul.Entity.Father;
 import org.junit.Test;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.io.File;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
@@ -73,8 +74,8 @@ public class BaseTest {
 //        byte[] bytes = "abcdefg".getBytes();
 //        ByteBuffer wrap = ByteBuffer.wrap(bytes);
 //        bytes[0]=1;
-        
-        
+
+
         if('\u0020' == ' '){
             System.out.println("true");
         }else{
@@ -224,6 +225,16 @@ public class BaseTest {
         if(price.compareTo(BigDecimal.ZERO) <= 0){
             throw new RuntimeException("商品价钱必须大于零");
         }
+
+    }
+
+    @Test
+    public void baseUse(){
+        Integer a = 1211;
+        Integer a1 = 1211;
+        System.out.println(a.equals(12));
+        System.out.println(a==a1);
+        System.out.println(a==1211);
     }
 }
 

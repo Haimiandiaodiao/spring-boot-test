@@ -8,11 +8,14 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.dyy.Modul.Entity.Son;
 import io.swagger.models.auth.In;
 import net.sf.cglib.beans.BeanCopier;
+import org.joda.time.DateTime;
 import org.junit.Test;
 import org.springframework.beans.BeanUtils;
 import springfox.documentation.spring.web.json.Json;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.*;
 
 /**
@@ -226,10 +229,53 @@ public class _004_FastJsonTest {
 
     @Test
     public void show (){
-        Integer integer = new Integer(100000);
-        Integer integer1 = new Integer(100000);
+        PromotionVO promotionVO = new PromotionVO();
+        promotionVO.setPrName("Dyy接口测试活动1");
+        LocalDateTime of = LocalDateTime.of(2018, 10, 10, 10, 10, 10);
+        long l = of.toInstant(ZoneOffset.of("+8")).toEpochMilli();
+        Date prStart = new Date(l);
 
-        System.out.println(integer.equals(integer1));
+        LocalDateTime of1 = LocalDateTime.of(2018, 11, 11, 11, 11, 11);
+        long l1 = of1.toInstant(ZoneOffset.of("+8")).toEpochMilli();
+
+        Date prEnd = new Date(l1);
+        promotionVO.setPrStart(prStart);
+        promotionVO.setPrEnd(prEnd);
+        promotionVO.setPrType(1);
+
+        promotionVO.setDataStatus(0);
+        promotionVO.setPrGroupnum(10);
+        promotionVO.setScoreType("AA");
+        promotionVO.setScoreTime(new BigDecimal("1.11"));
+        promotionVO.setImgUrl("www.baidu.com1");
+        promotionVO.setBannerImgUrl("www.baidu.com2");
+
+        List<PromotionVO.PromotionGoodsVO> goods = new ArrayList<>();
+        PromotionVO.PromotionGoodsVO good1 = new PromotionVO.PromotionGoodsVO();
+        good1.setSkuId(256);
+        good1.setGoodsNum(333);
+        good1.setSort(1);
+        good1.setGoPrPrice(new BigDecimal("1.11"));
+        good1.setGoLimit(10L);
+        good1.setSalenumMode(1);
+        good1.setGoStock(99L);
+
+
+        PromotionVO.PromotionGoodsVO good2 = new PromotionVO.PromotionGoodsVO();
+        good2.setSkuId(256);
+        good2.setGoodsNum(333);
+        good2.setSort(1);
+        good2.setGoPrPrice(new BigDecimal("2.22"));
+        good2.setGoLimit(10L);
+        good2.setSalenumMode(1);
+        good2.setGoStock(99L);
+
+        goods.add(good1);
+        goods.add(good2);
+        promotionVO.setPromotionGoodsList(goods);
+
+        String s = JSON.toJSONString(promotionVO);
+        System.out.println(s);
 
     }
 }

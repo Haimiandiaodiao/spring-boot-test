@@ -75,7 +75,7 @@
                enableSelectByExample="false" enableCountByExample="false">
         </table>-->
 
-        <table tableName="cates" enableUpdateByExample="false" enableDeleteByExample="false"
+        <table tableName="seek_promotion" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableCountByExample="false">
 
         </table>
