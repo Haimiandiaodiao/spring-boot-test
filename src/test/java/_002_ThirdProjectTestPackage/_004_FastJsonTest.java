@@ -1,10 +1,12 @@
 package _002_ThirdProjectTestPackage;
 
+import _000_day._001_7月17日反射.Student;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.parser.Feature;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.dyy.Modul.Entity.Father;
 import com.dyy.Modul.Entity.Son;
 import io.swagger.models.auth.In;
 import net.sf.cglib.beans.BeanCopier;
@@ -57,6 +59,11 @@ public class _004_FastJsonTest {
         LinkedHashMap linkedHashMap = JSON.parseObject(s, map.getClass());
 
         System.out.println(s);
+
+        Father student = new Father();
+        String s1 = JSON.toJSONString(student,SerializerFeature.WriteMapNullValue);
+        System.out.println(s1);
+
     }
 
     @Test
