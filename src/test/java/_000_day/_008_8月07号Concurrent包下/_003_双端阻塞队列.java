@@ -2,6 +2,7 @@ package _000_day._008_8月07号Concurrent包下;
 
 import org.junit.Test;
 
+import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -28,6 +29,33 @@ public class _003_双端阻塞队列 {
         Object take3 = list.takeLast();
 
         ConcurrentHashMap map = new ConcurrentHashMap(16,1.0f,8);
+
+    }
+
+
+    @Test
+    public void name() {
+
+        Vector vector = new Vector();
+        boolean add = vector.add("1");
+        boolean add1 = vector.add("1");
+        boolean add2 = vector.add("2");
+
+    }
+
+
+    @Test
+    public void name1() {
+        try{
+
+            Object aa = null;
+            aa.toString();
+        }catch(Exception ex){
+            System.out.println("2222222");
+        }finally{
+            System.out.println("111111111");
+
+        }
 
     }
 }
