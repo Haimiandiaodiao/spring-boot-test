@@ -17,7 +17,9 @@ import java.util.concurrent.CopyOnWriteArraySet;
  */
 public class _007_Multiset集合的支持 {
 
-    //1.Multiset把重复元素放入到集合中 可以完成数量统计功能
+    //1.Multiset把重复元素放入到集合中 可以完成数量统计功能 使用hash和equals 集合中存放重复元素
+    //2.count方法也使用了hash和equals方法
+
     @Test
     public void baseUse1(){
         List<String> words = new LinkedList<>();
@@ -96,11 +98,17 @@ public class _007_Multiset集合的支持 {
         entity3.setId(5);
         entity3.setNum(1);
 
+        Entity1 entity4 = new Entity1();
+        entity4.setId(2);
+        entity4.setNum(1);
+
+
         set1.add(entity1);
         set1.add(entity2);
         set1.add(entity3);
+        set1.add(entity4);
 
-
+        int count = set1.count(entity4);
 
         System.out.println("");
     }
