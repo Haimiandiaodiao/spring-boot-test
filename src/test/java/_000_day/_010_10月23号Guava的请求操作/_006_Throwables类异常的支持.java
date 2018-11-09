@@ -18,7 +18,8 @@ public class _006_Throwables类异常的支持 {
             b();
         }catch (Exception e){
             e.printStackTrace();
-
+            String localizedMessage = e.getLocalizedMessage();
+            System.out.println("");
             //1.获得异常链，最深的异常在集合的最里面
             List<Throwable> causalChain = Throwables.getCausalChain(e);
 

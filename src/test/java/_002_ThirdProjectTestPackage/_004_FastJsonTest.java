@@ -9,6 +9,9 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.dyy.Modul.Entity.Father;
 import com.dyy.Modul.Entity.Son;
 import io.swagger.models.auth.In;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import net.sf.cglib.beans.BeanCopier;
 import org.joda.time.DateTime;
 import org.junit.Test;
@@ -285,4 +288,40 @@ public class _004_FastJsonTest {
         System.out.println(s);
 
     }
+
+    @Test
+    public void testExtend(){
+        List<B> a = new ArrayList<>();
+        B b = new B();
+        b.setAge("11");
+        b.setName("a");
+        a.add(b);
+
+        enti aaa= new enti();
+        aaa.setA(a);
+        String s = JSON.toJSONString(aaa);
+        System.out.println(s);
+    }
+}
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+class  enti{
+    private  List<? extends A>  a;
+}
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+class A {
+    private String age;
+}
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+class B extends  A{
+    private String name;
 }
