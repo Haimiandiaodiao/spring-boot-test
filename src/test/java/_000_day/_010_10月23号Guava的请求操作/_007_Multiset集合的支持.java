@@ -118,4 +118,41 @@ public class _007_Multiset集合的支持 {
 
 
     }
+
+
+    @Test
+    public void Multiset测试() {
+        List<String> words = new LinkedList<>();
+        words.add("a");
+        words.add("a");
+        words.add("b");
+        words.add("c");
+        words.add("b");
+        words.add("d");
+        words.add("c");
+        words.add("e");
+        words.add("a");
+
+        LinkedHashMultiset<String> mset = LinkedHashMultiset.create();
+        mset.addAll(words);
+
+        //1.查询a的个数
+        int b = mset.count("b");
+        System.out.println("b元素的个数："+b);
+        //2.查询集合中的元素总个数
+        int size = mset.size();
+        System.out.println("mset元素的总个数："+size);
+        //3.转化为set
+        Set<String> strings = mset.elementSet();
+        System.out.println("转化为set的元素："+strings);
+        //4。转化为entrySet
+        Set<Multiset.Entry<String>> entries = mset.entrySet();
+        //5。添加指定元素指定个数
+
+        //6。删除指定元素指定个数
+
+
+
+
+    }
 }

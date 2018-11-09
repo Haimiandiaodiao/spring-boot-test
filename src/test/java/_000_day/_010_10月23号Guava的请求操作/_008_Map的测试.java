@@ -2,6 +2,7 @@ package _000_day._010_10月23号Guava的请求操作;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Maps;
+import net.bytebuddy.implementation.bytecode.StackSize;
 import org.junit.Test;
 
 import java.util.*;
@@ -21,6 +22,7 @@ public class _008_Map的测试 {
      * LinkedHashtable 继承Hashtable的规则
      *
      * */
+    /*set底层是由Map来实现的，key存放的是set具体的值，value是放的固定的值1，使用了hashcode和equal来判断是够相等*/
     @Test
     public void baseMapTest(){
         Entity1 entity1 = new Entity1();
@@ -76,6 +78,35 @@ public class _008_Map的测试 {
         System.out.println(map);
     }
 
+    /**
+     * setadd是使用了什么方法
+     * <br/>
+     * @author Dyy <br/>
+     * @description <br/>
+     * @date 2018/11/8 11:58 PM <br/>
+     * @param  <br/>
+     */
+    @Test
+    public void setTest() {
+        Entity1 entity1 = new Entity1();
+        entity1.setId(1);
+        Entity1 entity2 = new Entity1();
+        entity2.setId(1);
+        Entity1 entity3 = new Entity1();
+        entity3.setId(1);
+        entity3.setNum(1);
+
+        Set<Entity1> aaa = new HashSet<>();
+        aaa.add(entity1);
+        aaa.add(entity2);
+        aaa.add(entity3);
+        aaa.add(null);
+        aaa.add(null);
+
+        System.out.println();
+
+
+    }
 
     @Test
     public void HashTable的测试(){
@@ -123,7 +154,7 @@ public class _008_Map的测试 {
         map.put(entity2,"4");
         map.put(null,"100");
         map.put(null,"200");
-        
+
         System.out.println("");
     }
 
@@ -140,7 +171,7 @@ public class _008_Map的测试 {
         Hashtable c = new Hashtable();
         c.put(null,1);//no
 //        c.put(1,null);//no
-        
+
         System.out.println("");
     }
 
