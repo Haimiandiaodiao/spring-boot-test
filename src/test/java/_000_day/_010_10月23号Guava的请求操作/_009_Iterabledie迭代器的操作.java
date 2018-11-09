@@ -18,8 +18,8 @@ import java.util.List;
  * @Date 2018/11/9 11:34 PM<br/>
  */
 public class _009_Iterabledie迭代器的操作 {
-
-
+    //http://ifeve.com/google-guava-collectionutilities/
+    //http://ifeve.com/google-guava-newcollectiontypes/
     @Test
     public void 迭代器的基本使用() {
         List<Integer> integers = Ints.asList(1, 2, 3);
