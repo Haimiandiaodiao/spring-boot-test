@@ -4,6 +4,7 @@ import com.dyy.Jdk8_Package.Modul.Dish;
 import org.apache.commons.codec.binary.Base64;
 import org.junit.Test;
 
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -32,13 +33,24 @@ public class _001_信息摘要 {
 
     }
 
+
+    /**
+     * @Author:Dyy
+     * 使用BigInteger对Md5加密进行输出
+     * @Description:
+     * @Date: Created in 12:32 2018/11/10
+     * @param
+     */
     @Test
     public void MD信息摘要算法() throws NoSuchAlgorithmException {
-        String str = "Dyy正在学习base64加密==================================================";
+        String str = "Dyy正在学习";
         MessageDigest md5 = MessageDigest.getInstance("MD5");
         md5.update(str.getBytes());
         byte[] digest = md5.digest();
         System.out.println(Base64.encodeBase64String(digest));
+        System.out.println("直接输出md5加密内容=====>"+new String(digest));
+        BigInteger bigInteger = new BigInteger(digest);
+        System.out.println("16进制输出内容==>"+bigInteger.toString(16));
 
         //========SHA编码
         MessageDigest instance = MessageDigest.getInstance("SHA-512");

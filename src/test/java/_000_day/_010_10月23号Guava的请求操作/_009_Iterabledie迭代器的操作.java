@@ -25,7 +25,7 @@ public class _009_Iterabledie迭代器的操作 {
         List<Integer> integers = Ints.asList(1, 2, 3);
         List<Float> floats = Floats.asList(1.1f, 2.2f);
         BigDecimal bigDecimal = new BigDecimal("1.1111");
-        BigInteger bigInteger = new BigInteger("1111111111111111111111111");
+        BigInteger bigInteger = new BigInteger("11111",2);
         List<Integer> integers1 = Ints.asList(1, 1, 2);
 
         ArrayList<Number> bigDecimals = Lists.newArrayList(bigDecimal,bigInteger);
