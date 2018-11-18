@@ -6,6 +6,7 @@ package _000_day._010_10月23号Guava的请求操作;
  * @Description:
  * @Date: Created in 10:08 2018/11/7
  */
+
 public class Entity1 implements Comparable<Entity1>{
     private static int  inc = 0;
     //hash的值
@@ -40,6 +41,14 @@ public class Entity1 implements Comparable<Entity1>{
         if (o == null || getClass() != o.getClass()) return false;
         Entity1 entity1 = (Entity1) o;
         return  entity1.getId() == id;
+    }
+
+    @Override
+    public String toString() {
+        return "Entity1{" +
+                "num=" + num +
+                ", id=" + id +
+                '}';
     }
 
     @Override

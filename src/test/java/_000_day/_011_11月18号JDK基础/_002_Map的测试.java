@@ -1,5 +1,6 @@
-package _000_day._010_10月23号Guava的请求操作;
+package _000_day._011_11月18号JDK基础;
 
+import _000_day._010_10月23号Guava的请求操作.Entity1;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Maps;
 import net.bytebuddy.implementation.bytecode.StackSize;
@@ -12,7 +13,7 @@ import java.util.*;
  * @Description:
  * @Date: Created in 10:15 2018/11/7
  */
-public class _008_Map的测试 {
+public class _002_Map的测试 {
 
     /**
      * IdentityHashMap  比较的是地址  key和value 都可以为null
