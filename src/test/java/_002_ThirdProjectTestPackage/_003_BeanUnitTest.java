@@ -4,10 +4,14 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.dyy.Modul.Entity.Father;
 import com.dyy.Modul.Entity.Son;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.oracle.deploy.update.Updater;
 import org.apache.commons.beanutils.BeanPropertyValueEqualsPredicate;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.junit.Test;
+import org.springframework.cglib.beans.BeanMap;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -18,6 +22,114 @@ import java.util.*;
  * @create 2018/1/25
  */
 public class _003_BeanUnitTest {
+
+    @Test
+    public void ddddddd(){
+        HashMap<Integer, Map<String, Object>> shareMap = Maps.newHashMapWithExpectedSize(5);
+        HashMap<String, Object> aa = Maps.newHashMap();
+        aa.put("name","Dyy");
+        aa.put("age",1);
+
+        shareMap.put(1,aa);
+
+        Collection<Map<String, Object>> values = shareMap.values();
+
+        
+        System.out.println("");
+    }
+
+
+    @Test
+    public void dddd(){
+        Map aa= new HashMap();
+        aa.put("MsgId","201811150939111");
+        aa.put("Channel",0);
+        aa.put("MobileNo","15652606177");
+        aa.put("Content","验证码23232323");
+        aa.put("Zone","86");
+
+        String s = JSON.toJSONString(aa);
+        System.out.println(s);
+        String s1 = JSON.toJSONString(s);
+        System.out.println(s1);
+    }
+
+
+    @Test
+    public void contain(){
+    
+           int i= 0;
+           A:if(true){
+               System.out.println("come");
+             if(i == 0){
+                break A;
+             }else{
+                 System.out.println("BBBB");
+             }
+            System.out.println("AAA");
+           }
+        
+        System.out.println("s");
+        
+        LinkedList<Integer> ints = Lists.newLinkedList();
+        ints.add(1);
+        ints.add(2);
+        ints.add(3);
+        ints.add(4);
+
+        System.out.println(ints.contains(1));
+        System.out.println(ints.contains(new Integer(1)));
+        System.out.println(ints.contains(6));
+        System.out.println(ints.contains(Integer.valueOf(6)));
+
+
+    }
+
+
+
+    @Test
+    public void 内部类及关系(){
+
+        String json = "{\"integral\":1,\"recommendedNum\":2,\"directlyVipCnt\":4,\"totalVipCnt\":7,\"vipCntExceptDirectly\":3,\"teamManagerCnt\":5,\"totalVipNum\":8,\"heirIntegral\":6,\"takeoutIntegral\":9}";
+        UpdateRule.UpdateToMangerRule updateToMangerRule = JSON.parseObject(json, UpdateRule.UpdateToMangerRule.class);
+        UpdateRule.UpdateToShopManagerRule updateToMangerRul1e = JSON.parseObject(json, UpdateRule.UpdateToShopManagerRule.class);
+
+
+
+
+
+        UpdateRule.UpdateToMajorRule a = new UpdateRule.UpdateToMajorRule();
+
+
+        a.setDirectlyVipCnt(1);
+
+        UpdateRule b = a;
+        
+        System.out.println("");
+        
+        
+    }
+
+    /**
+     * 使用BeanMap将Bean进行赋值
+     * @Author:Dyy
+     * @Description:
+     * @Date: Created in 16:27 2018/11/14
+     * @param
+     */
+    @Test
+    public void BeanMapUser(){
+        Map<String,String> map = new HashMap<>();
+        map.put("xopenid","1");
+        map.put("gopenid","2");
+        map.put("unionid","3");
+        map.put("nickname","4");
+        UserVOV2 en= new UserVOV2();
+        BeanMap bean = BeanMap.create(en);
+        bean.putAll(map);
+
+        System.out.println();
+    }
 
     /**
      * 1.将Map封装成Bean

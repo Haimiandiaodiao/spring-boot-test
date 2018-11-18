@@ -305,9 +305,18 @@ public class _001_安全提供者体系结果 {
         RSAPrivateKey aPrivate = (RSAPrivateKey)keyPair.getPrivate();
         RSAPublicKey aPublic = (RSAPublicKey)keyPair.getPublic();
 
+        byte[] bytes3 = Base64.decodeBase64("MIIBCgKCAQEAzT4QdM5UOwhPaqALMESDUHf30M1bKhVF1IU8bjrbLwjgyScPNjhT\n" +
+                "RXPRUD4n5ybcmxvJK/SsUSvozfFdhnjF8F/sPjs3UuQOF4BGwddBts116tgCl67e\n" +
+                "BQH+lO44iv4xbKgKlwEAzCQYKqv7qCdEhZEyLklXARv/QB30QOfEzmxygL/fFKfa\n" +
+                "YXwaTBLRLfdD3GIuj6OFXkZPkP7xE55pWtLGp7GJ0Tw8U5t+tH1Rx9oNEgbHSqze\n" +
+                "7fHhkhAN0AtPnCzFymYwORAs9F0x2Flpeisd7ekzZlwdfI99wxAHmTpjW7AIoBLC\n" +
+                "MfDMx8RUjz8YMSVyBBAFHqVe+9vo34tqnwIDAQAB");
+
+
         //私钥加密公钥解密
-        PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(aPrivate.getEncoded());
+        PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(bytes3);
         KeyFactory rsa1 = KeyFactory.getInstance("RSA");
+//        rsa1.generatePublic();
         PrivateKey privateKey = rsa1.generatePrivate(pkcs8EncodedKeySpec);
         //对数据进行解密的操作
         Cipher rsa2 = Cipher.getInstance("RSA");
@@ -400,6 +409,5 @@ public class _001_安全提供者体系结果 {
         SSLContext ssl = SSLContext.getInstance("SSL");
 
     }
-
 
 }

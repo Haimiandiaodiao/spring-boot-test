@@ -75,10 +75,24 @@
                enableSelectByExample="false" enableCountByExample="false">
         </table>-->
 
-        <table tableName="seek_promotion" enableUpdateByExample="false" enableDeleteByExample="false"
+        <table tableName="seek_user_log" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableCountByExample="false">
+            <columnOverride column="log_type" property="logType" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <!--<columnOverride column="type" property="type" jdbcType="INTEGER" javaType="java.lang.Integer"/>-->
+            <!--<columnOverride column="grade" property="grade" jdbcType="INTEGER" javaType="java.lang.Integer"/>-->
 
         </table>
 
+        <!--<table tableName="agent" enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" enableCountByExample="false">-->
+            <!--<property name="constructorBased" value="false"/>-->
+            <!--<columnOverride column="usertype" property="usertype" jdbcType="INTEGER" javaType="java.lang.Integer">-->
+            <!--</columnOverride>-->
+            <!--<columnOverride column="is_default_zj" property="isDefaultZj" jdbcType="INTEGER" javaType="java.lang.Integer">-->
+            <!--</columnOverride>-->
+            <!--<columnOverride column="is_sure_share" property="isSureShare" jdbcType="INTEGER"  javaType="java.lang.Integer">-->
+            <!--</columnOverride>-->
+
+        <!--</table>-->
     </context>
 </generatorConfiguration>

@@ -30,6 +30,27 @@ import java.util.*;
 public class _004_FastJsonTest {
 
     @Test
+    public void createUser(){
+        UserVOV2 userVOV2 = new UserVOV2();
+        userVOV2.setXopenid("AAAAAAAA");
+        userVOV2.setGopenid("11111111");
+        userVOV2.setUnionid("BBBBBBBBBB");
+        userVOV2.setNickname("Dyy测试注册");
+        userVOV2.setCardid("4128231992");
+        userVOV2.setProvince("北京");
+        userVOV2.setCity("beijing");
+        userVOV2.setPic("www.baidu.com");
+        userVOV2.setIp("192.168.1.111");
+        userVOV2.setRealname("阳");
+        userVOV2.setMobile("12313");
+        userVOV2.setGender(1);
+        userVOV2.setSharedId(67524);
+
+        String s = JSON.toJSONString(userVOV2);
+        System.out.println(s);
+    }
+
+    @Test
     public void baseUser1(){
         String name1= "WD";
         String name = "Dyy";

@@ -236,6 +236,22 @@ public class BaseTest {
         System.out.println(a==a1);
         System.out.println(a==1211);
     }
+    
+    @Test
+    public void randCode(){
+       //如果字符种类不够，可以自己再添加一些
+     String range = "A0BC1DE2F3GH4IJ5K6LM7N8OP9QRSTUVWXYZ";
+     Random random = new Random();
+     StringBuffer result = new StringBuffer();
+            //要生成几位，就把这里的数字改成几
+     for ( int i = 0; i < 8; i++ ){
+        result.append( range.charAt( random.nextInt( range.length() ) ) );
+     }
+    System.out.println(result.toString()); ;
+    }
+
+
+
 }
 
 
