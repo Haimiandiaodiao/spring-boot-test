@@ -1,8 +1,7 @@
 package _000_day._010_10月23号Guava的请求操作;
 
-import com.google.common.base.Preconditions;
 import com.google.common.collect.*;
-import org.apache.tools.ant.util.LinkedHashtable;
+
 import org.junit.Test;
 
 import java.util.*;
@@ -19,6 +18,17 @@ public class _007_Multiset集合的支持 {
 
     //1.Multiset把重复元素放入到集合中 可以完成数量统计功能 使用hash和equals 集合中存放重复元素
     //2.count方法也使用了hash和equals方法
+    //3.这里的set的指的的是数学中的Set的{a,a,b},{b,a,b}是相等的
+    //4。 multiset的实现大多都是 JDK中map的实现
+   /**
+    * Map	            对应的Multiset	        是否支持null元素
+    * HashMap	        HashMultiset	        是
+    * TreeMap	        TreeMultiset	        是（如果comparator支持的话）
+    * LinkedHashMap	    LinkedHashMultiset      是
+    * ConcurrentHashMap	ConcurrentHashMultiset	否
+    * ImmutableMap	    ImmutableMultiset	    否
+    */
+
 
     @Test
     public void baseUse1(){
@@ -160,7 +170,100 @@ public class _007_Multiset集合的支持 {
         //6。删除指定元素指定个数
 
 
+    }
 
+
+    @Test
+    public void name() {
+        String a = new String("a");
+        int i = a.hashCode();
+        System.out.println(i);
+
+
+        String aaaa = new String("aaaa");
+        int i1 = aaaa.hashCode();
+        System.out.println(i1);
+
+        //String的equals比较没有用到equals
+        System.out.println(a.equals(aaaa));
+    }
+
+
+    //3.这里的set的指的的是数学中的Set的{a,a,b},{b,a,b}是相等的
+    @Test
+    public void 测试mutilsSet的是否数学意义上的相等() {
+        LinkedHashMultiset<String> a1 = LinkedHashMultiset.create();
+        LinkedHashMultiset<String> a2 = LinkedHashMultiset.create();
+
+        a1.add("a");
+        a1.add("b");
+        a1.add("b");
+        a1.add("b");
+        a1.add("c");
+        a1.add("c");
+        a1.add("c");
+
+
+        a2.add("a");
+        a2.add("b");
+        a2.add("e");
+
+        //1。其实就是 a1 - a2的效果  包括数量和种类
+
+        Multiset<String> difference = Multisets.difference(a1, a2);
+        System.out.println(difference);
+
+        //2。a2-a1 >=0 数量和种类上
+        //网上解释  对任意o，如果a2.count(o)<=a1.count(o)，返回true
+//        boolean b = Multisets.containsOccurrences(a2, a1);
+//        System.out.println(b);
+        
+        
+        //3。返回的是 有没有从a2中有移除的a1的元素 有返回true 无返回false  有一个也算
+        //网上的解释  对toRemove中的重复元素，仅在removeFrom中删除相同个数。
+//        boolean b1 = Multisets.removeOccurrences(a1, a2);
+//        System.out.println(a1);
+//        System.out.println(b1);
+        
+        //4 修改a1，以保证任意o都符合a1.count(o)<=a2.count(o)
+//        boolean b2 = Multisets.retainOccurrences(a1, a2);
+//        System.out.println(a1);
+//        System.out.println(b2);
+        
+        //5.返回两个multiset的交集 包含数量的交集
+        Multiset<String> intersection = Multisets.intersection(a1, a2);
+        System.out.println(intersection);
+
+    }
+
+
+    /**
+     *  ConcurrentHashMultiset  key不可以为空
+     */
+    @Test
+    public void ConcurrentSet和Concumultiset不能指出null的对象() {
+        ConcurrentHashMultiset<String> a = ConcurrentHashMultiset.create();
+        a.add(null);
+        System.out.println();
+
+    }
+
+    /**
+     * sortedMultiset的实现
+     */
+    @Test
+    public void 获得一个区间内的排序() {
+        TreeMultiset<String> a = TreeMultiset.create();
+        a.add("a",2);
+        a.add("b",1);
+        a.add("c",3);
+        a.add("d",5);
+        SortedMultiset<String> strings = a.subMultiset("a", BoundType.CLOSED, "c", BoundType.CLOSED);
+        
+        /**
+         *  可以对排序的集合进行截取
+         */
+        System.out.println(strings);
 
     }
 }
