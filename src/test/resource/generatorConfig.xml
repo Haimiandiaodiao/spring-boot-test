@@ -75,9 +75,9 @@
                enableSelectByExample="false" enableCountByExample="false">
         </table>-->
 
-        <table tableName="seek_user_log" enableUpdateByExample="false" enableDeleteByExample="false"
+        <table tableName="seek_goods_operate_log" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableCountByExample="false">
-            <columnOverride column="log_type" property="logType" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <!--<columnOverride column="log_type" property="logType" jdbcType="INTEGER" javaType="java.lang.Integer"/>-->
             <!--<columnOverride column="type" property="type" jdbcType="INTEGER" javaType="java.lang.Integer"/>-->
             <!--<columnOverride column="grade" property="grade" jdbcType="INTEGER" javaType="java.lang.Integer"/>-->
 

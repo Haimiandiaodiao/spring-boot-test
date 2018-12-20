@@ -1,6 +1,7 @@
 package _000_day._010_10月23号Guava的请求操作;
 
 import com.google.common.collect.BoundType;
+import com.google.common.collect.ContiguousSet;
 import com.google.common.collect.DiscreteDomain;
 import com.google.common.collect.Range;
 import org.junit.Test;
@@ -130,5 +131,14 @@ public class _005_Range序列 {
 
 
 
+    }
+
+    @Test
+    public void 区间转集合(){
+        Range<Integer> open = Range.open(1, 5);
+        ContiguousSet<Integer> integers = ContiguousSet.create(open, DiscreteDomain.integers());
+        for (Integer integer : integers) {
+            System.out.println(integer);
+        }
     }
 }

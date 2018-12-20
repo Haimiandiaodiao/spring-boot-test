@@ -1,6 +1,7 @@
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.dyy.Modul.Entity.Father;
+import com.google.common.collect.*;
 import org.junit.Test;
 
 import javax.swing.plaf.synth.SynthOptionPaneUI;
@@ -251,7 +252,50 @@ public class BaseTest {
     }
 
 
+    /**
+     * 拼接参数的操作
+     * @Author:Dyy
+     * @Description:
+     * @Date: Created in 18:19 2018/10/12
+     * @param value
+     */
+    public static String joinValue(String... value){
+        StringBuffer sb = new StringBuffer();
+        for (String s : value) {
+            sb.append(s);
+        }
+        return sb.toString();
+    }
 
+
+    @Test
+    public void shwo (){
+        HashMultimap<String, String> a = HashMultimap.create();
+
+        LinkedHashMultimap.create();
+        a.put(null,null);
+        a.put(null,"1");
+        System.out.println(a);
+    }
+
+    @Test
+    public void test11(){
+        String a= ".\\jcexmDir\\SID_121081682658255.txt";
+        int i = a.lastIndexOf("\\");
+        System.out.println(i);
+    }
+
+    @Test
+    public void test2(){
+        ArrayList<Integer> list = Lists.newArrayList();
+        list.add(0,3);
+        list.add(0,2);
+        list.add(0,1);
+        System.out.println(list);
+
+        Collections.reverse(list);
+        System.out.println(list);
+    }
 }
 
 

@@ -1,11 +1,18 @@
 package _000_day._010_10月23号Guava的请求操作;
 
 import com.google.common.base.Function;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
+import jdk.internal.org.objectweb.asm.tree.IntInsnNode;
+import org.hibernate.validator.constraints.br.TituloEleitoral;
 import org.junit.Test;
+import org.omg.CORBA.OBJ_ADAPTER;
+import org.springframework.core.annotation.Order;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -319,4 +326,60 @@ public class _003_ordering排序 {
 
       //immutableSortedCopy 返回排序之后的不可变数组
     }
+
+    @Test
+    public void 复习orering的使用(){
+
+        ArrayList<Integer> init = Lists.newArrayList(1, 11, 2,4, 22, 3, 33, 4, 44);
+        System.out.println(init);
+
+        Ordering<Comparable> natural1 = Ordering.natural().reverse();
+
+        List<Integer> integers = natural1.sortedCopy(init);
+        integers.add(100);
+        ImmutableList<Integer> integers1 = natural1.immutableSortedCopy(init);
+//        integers1.add(99);
+
+        Integer min = natural1.min(init);
+        System.out.println("集合中最小的元素："+min);
+
+
+        Collections.sort(init,natural1);
+        boolean ordered = natural1.isOrdered(init);
+        //严格的排序不能有排序值相等的元素
+        boolean strictlyOrdered = natural1.isStrictlyOrdered(init);
+        System.out.println(ordered);
+        System.out.println(strictlyOrdered);
+
+        System.out.println(natural1.greatestOf(init,3));
+        System.out.println(natural1.leastOf(init,3));
+
+        //1.通过自然排序
+        Ordering<Integer> natural = Ordering.natural();
+        Collections.sort(init,natural);
+        System.out.println(init);
+        //2.使用字符串排序
+        Ordering<Object> string = Ordering.usingToString();
+        Collections.sort(init,string);
+        System.out.println("字符串的==》"+init);
+
+        //使用comparator构建排序器
+        Comparator<Integer> comparator = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return 0;
+            }
+        };
+        Ordering<Integer> from = Ordering.from(comparator);
+        Collections.sort(init,from);
+        System.out.println("自定义排序器==》"+init);
+
+        //可以拿到追加的排序规则
+
+        Ordering<Object> compound = string.reverse().nullsLast();
+        Ordering<Iterable<Object>> lexicographical = compound.lexicographical();
+
+    }
+
+
 }

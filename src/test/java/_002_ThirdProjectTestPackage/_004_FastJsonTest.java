@@ -28,6 +28,15 @@ import java.util.*;
  * @create 2018/1/26
  */
 public class _004_FastJsonTest {
+    @Test
+    public void crateUse(){
+        String s = "{\"monery\": 111}";
+        JSONObject object = JSON.parseObject(s);
+        BigDecimal monery = object.getBigDecimal("monery");
+        System.out.println(monery);
+    }
+
+
 
     @Test
     public void createUser(){
