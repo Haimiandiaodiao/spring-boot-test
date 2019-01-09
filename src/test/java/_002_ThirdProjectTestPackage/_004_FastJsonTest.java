@@ -1,23 +1,25 @@
 package _002_ThirdProjectTestPackage;
 
-import _000_day._001_7月17日反射.Student;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.parser.Feature;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.dyy.Modul.Entity.Father;
 import com.dyy.Modul.Entity.Son;
-import io.swagger.models.auth.In;
+import com.google.common.base.Charsets;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.sf.cglib.beans.BeanCopier;
-import org.joda.time.DateTime;
 import org.junit.Test;
-import org.springframework.beans.BeanUtils;
-import springfox.documentation.spring.web.json.Json;
+import org.springframework.util.StringUtils;
+import sun.security.krb5.Config;
 
+import java.beans.BeanInfo;
+import java.beans.Introspector;
+import java.beans.MethodDescriptor;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -29,7 +31,7 @@ import java.util.*;
  */
 public class _004_FastJsonTest {
     @Test
-    public void crateUse(){
+    public void crateUse() {
         String s = "{\"monery\": 111}";
         JSONObject object = JSON.parseObject(s);
         BigDecimal monery = object.getBigDecimal("monery");
@@ -37,9 +39,8 @@ public class _004_FastJsonTest {
     }
 
 
-
     @Test
-    public void createUser(){
+    public void createUser() {
         UserVOV2 userVOV2 = new UserVOV2();
         userVOV2.setXopenid("AAAAAAAA");
         userVOV2.setGopenid("11111111");
@@ -60,32 +61,32 @@ public class _004_FastJsonTest {
     }
 
     @Test
-    public void baseUser1(){
-        String name1= "WD";
+    public void baseUser1() {
+        String name1 = "WD";
         String name = "Dyy";
         Integer age = 11;
-        List<String> hobbies= new ArrayList<>();
+        List<String> hobbies = new ArrayList<>();
         hobbies.add("篮球");
         hobbies.add("足球");
         hobbies.add("排球");
 
-        Son son = new Son(name, age, hobbies,null);
+        Son son = new Son(name, age, hobbies, null);
 
         //SimplePropertyExcludPreFilter filter =  new SimplePropertyExcludPreFilter();
-       // filter.setExcludesProperties("name");
+        // filter.setExcludesProperties("name");
         String s = JSON.toJSONString(son);
 
         System.out.println(s);
     }
 
     @Test
-    public void baseUser2(){
+    public void baseUser2() {
         LinkedHashMap<Object, Object> map = new LinkedHashMap<>();
-        map.put("validUser",null);
-        map.put("personConsume",null);
-        map.put("teamConsume",null);
-        map.put("updateTo",2);
-        map.put("canUse",0);
+        map.put("validUser", null);
+        map.put("personConsume", null);
+        map.put("teamConsume", null);
+        map.put("updateTo", 2);
+        map.put("canUse", 0);
 
         String s = JSON.toJSONString(map, SerializerFeature.WriteMapNullValue);
 
@@ -94,14 +95,14 @@ public class _004_FastJsonTest {
         System.out.println(s);
 
         Father student = new Father();
-        String s1 = JSON.toJSONString(student,SerializerFeature.WriteMapNullValue);
+        String s1 = JSON.toJSONString(student, SerializerFeature.WriteMapNullValue);
         System.out.println(s1);
 
     }
 
     @Test
-    public void 测试自定义Seriablizer(){
-        JsonTestInsert entity = new JsonTestInsert(11,"dd",new Date(),20929008912961536L);
+    public void 测试自定义Seriablizer() {
+        JsonTestInsert entity = new JsonTestInsert(11, "dd", new Date(), 20929008912961536L);
         String s = JSON.toJSONString(entity);
         System.out.println(s);
         JsonTestInsert jsonTestInsert = JSON.parseObject(s, JsonTestInsert.class);
@@ -114,20 +115,20 @@ public class _004_FastJsonTest {
     }
 
     @Test
-    public void 测试JsonObject(){
+    public void 测试JsonObject() {
         JSONArray a1 = new JSONArray();
         JSONObject a2 = new JSONObject();
         JSONObject a3 = new JSONObject();
 
-        a2.put("name","Dyy");
-        a2.put("id",100000000000000001L);
-        a2.put("age",10);
-        a2.put("like",null);
+        a2.put("name", "Dyy");
+        a2.put("id", 100000000000000001L);
+        a2.put("age", 10);
+        a2.put("like", null);
 
-        a3.put("name","Dyy2");
-        a3.put("id",100000000000000002L);
-        a3.put("age",12);
-        a3.put("like",null);
+        a3.put("name", "Dyy2");
+        a3.put("id", 100000000000000002L);
+        a3.put("age", 12);
+        a3.put("like", null);
 
         a1.add(a2);
         a1.add(a3);
@@ -137,17 +138,17 @@ public class _004_FastJsonTest {
 
 
     @Test
-    public void testtet(){
-        Map<String,String> a= new HashMap();
-        Map<String,String> b= new HashMap();
+    public void testtet() {
+        Map<String, String> a = new HashMap();
+        Map<String, String> b = new HashMap();
 
-        a.put("1","a");
-        a.put("2","b");
+        a.put("1", "a");
+        a.put("2", "b");
 
         for (Map.Entry<String, String> aa : a.entrySet()) {
             String key = aa.getKey();
             String value = aa.getValue();
-            b.put(key,value);
+            b.put(key, value);
         }
 
         a.remove("1");
@@ -157,7 +158,7 @@ public class _004_FastJsonTest {
     }
 
     @Test
-    public void addSkuNorm(){
+    public void addSkuNorm() {
         SkuNormVO a = new SkuNormVO();
         Set b = new HashSet();
 
@@ -168,7 +169,6 @@ public class _004_FastJsonTest {
         //重量
         a.setItemId(21972058216992768L);
         a.setNormList(b);
-
 
 
         SkuNormVO c = new SkuNormVO();
@@ -182,7 +182,7 @@ public class _004_FastJsonTest {
         c.setItemId(21972058321850368L);
         c.setNormList(d);
 
-        ArrayList ddd= new ArrayList();
+        ArrayList ddd = new ArrayList();
         ddd.add(a);
         ddd.add(c);
 
@@ -192,7 +192,7 @@ public class _004_FastJsonTest {
 
 
     @Test
-    public void 测试内部类的Json化(){
+    public void 测试内部类的Json化() {
         ImportSkuVO importSkuVO = new ImportSkuVO();
         importSkuVO.setGoodsId("商品的Id是那个短的Id");
 
@@ -216,13 +216,11 @@ public class _004_FastJsonTest {
         normLIst.add(importSkuNormListItem2);
 
 
-
-
         ImportSkuVO.ImporSkuSkuListItem imporSkuSkuListItem1 = importSkuVO.new ImporSkuSkuListItem();
         ImportSkuVO.ImporSkuSkuListItem imporSkuSkuListItem2 = importSkuVO.new ImporSkuSkuListItem();
 
-        List list1=new ArrayList();
-        List list3=new ArrayList();
+        List list1 = new ArrayList();
+        List list3 = new ArrayList();
 
         list1.add("红");
         list1.add("X");
@@ -256,7 +254,7 @@ public class _004_FastJsonTest {
         imporSkuSkuListItem2.setProfit(new BigDecimal(20));
         imporSkuSkuListItem2.setStock(new BigDecimal("444"));
 
-        List<ImportSkuVO.ImporSkuSkuListItem>  skuList = new ArrayList<>();
+        List<ImportSkuVO.ImporSkuSkuListItem> skuList = new ArrayList<>();
         skuList.add(imporSkuSkuListItem1);
         skuList.add(imporSkuSkuListItem2);
 
@@ -268,7 +266,7 @@ public class _004_FastJsonTest {
 
 
     @Test
-    public void show (){
+    public void show() {
         PromotionVO promotionVO = new PromotionVO();
         promotionVO.setPrName("Dyy接口测试活动1");
         LocalDateTime of = LocalDateTime.of(2018, 10, 10, 10, 10, 10);
@@ -320,19 +318,168 @@ public class _004_FastJsonTest {
     }
 
     @Test
-    public void testExtend(){
+    public void testExtend() {
         List<B> a = new ArrayList<>();
         B b = new B();
         b.setAge("11");
         b.setName("a");
         a.add(b);
 
-        enti aaa= new enti();
+        enti aaa = new enti();
         aaa.setA(a);
         String s = JSON.toJSONString(aaa);
         System.out.println(s);
     }
+
+    @Test
+    public void testShareRule() {
+        long endTime = System.currentTimeMillis() + 200000L;
+        NewScoreShareRule.NewScoreShareRulezConfig entity = new NewScoreShareRule.NewScoreShareRulezConfig();
+        NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf buyersProportion = new NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf();
+        buyersProportion.setIsScale(1);
+        buyersProportion.setScale(new BigDecimal("1.1"));
+        buyersProportion.setProportion(new BigDecimal("1.1"));
+        buyersProportion.setStartTime(1L);
+        buyersProportion.setEndTime(endTime);
+        NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf vipProportion = new NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf();
+        vipProportion.setIsScale(1);
+        vipProportion.setScale(new BigDecimal("2.1"));
+        vipProportion.setProportion(new BigDecimal("1.1"));
+
+        vipProportion.setStartTime(1L);
+        vipProportion.setEndTime(endTime);
+        NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf generalManagerProportion = new NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf();
+        generalManagerProportion.setIsScale(1);
+        generalManagerProportion.setStartTime(1L);
+        generalManagerProportion.setScale(new BigDecimal("3.1"));
+        generalManagerProportion.setProportion(new BigDecimal("1.1"));
+
+        generalManagerProportion.setEndTime(endTime);
+        NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf superiorGeneralManagerProportion = new NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf();
+        superiorGeneralManagerProportion.setIsScale(1);
+        superiorGeneralManagerProportion.setStartTime(1L);
+        superiorGeneralManagerProportion.setScale(new BigDecimal("4.1"));
+        superiorGeneralManagerProportion.setProportion(new BigDecimal("1.1"));
+
+        superiorGeneralManagerProportion.setEndTime(endTime);
+
+
+        entity.setBuyersProportion(buyersProportion);
+        entity.setVipProportion(vipProportion);
+        entity.setGeneralManagerProportion(generalManagerProportion);
+        entity.setSuperiorGeneralManagerProportion(superiorGeneralManagerProportion);
+
+        String s = JSON.toJSONString(entity, SerializerFeature.WriteMapNullValue);
+//        String s = "{\"buyersProportion\":35,\"directReferrerProportion\":15,\"vipProportion\":20,\"directorProportion\":10,\"superiorDirectorProportion\":4,\"generalManagerProportion\":5,\"superiorGeneralManagerProportion\":2}";
+
+
+        try {
+            Date currentTime = new Date();
+//            String s = agentMapper.selectConfigByName(shareConfigKey);
+            if (!StringUtils.isEmpty(s)) {
+                NewScoreShareRule.NewScoreShareRulezConfig rule = JSON.parseObject(s, NewScoreShareRule.NewScoreShareRulezConfig.class);
+                //拿到每一项的配置得到他们的时间进行更新
+                Class<NewScoreShareRule.NewScoreShareRulezConfig> clazz = NewScoreShareRule.NewScoreShareRulezConfig.class;
+                Class<NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf> configClazz = NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf.class;
+                Field[] fields = clazz.getDeclaredFields();
+                for (Field field : fields) {
+                    //设置暴力访问
+                    field.setAccessible(true);
+                    Class<?> fieldType = field.getType();
+                    if (fieldType == configClazz) {
+                        NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf detailConfig = (NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf) field.get(rule);
+                        disposeShareConfig(detailConfig);
+                    }
+                }
+
+                String s1 = JSON.toJSONString(rule);
+                //对新老值进行比较看是否发生修购没有发生修改的话则不进行更新
+                //浪费一点算力
+                String originRule = MD5Utils.MD5Encode(s, Charsets.UTF_8.name());
+                String doneRule = MD5Utils.MD5Encode(s, Charsets.UTF_8.name());
+                //不相等的话说明产生了
+                if (!originRule.equals(doneRule)) {
+                    //如果不想同则调用更新的操作
+//                    SeekConfig seekConfig = new SeekConfig();
+//                    seekConfig.setName(shareConfigKey);
+//                    seekConfig.setValue(doneRule);
+//                    seekConfig.setSysEditTime(currentTime);
+//                    ResultResponse<Integer> result = seekConfigService.updateSeekConfig(seekConfig);
+//                    Integer data = result.getData();
+
+
+                }
+                long currentTimeMillis = System.currentTimeMillis();
+                NewScoreShareRule newScoreShareRule = createNewScoreShareRule(rule, currentTimeMillis);
+                System.out.println(newScoreShareRule);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    private void disposeShareConfig(NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf detailConfig){
+        if(detailConfig == null){
+            return ;
+        }
+        Integer isScale = detailConfig.getIsScale();
+        Long endTime = detailConfig.getEndTime();
+        long currentTime = System.currentTimeMillis();
+        if(isScale == 1){
+            //开启了配置查看时间是否到期
+            if(currentTime >= endTime){
+                //说明到了结束的时间了对开关进行维护
+                detailConfig.setIsScale(0);
+            }
+        }
+    }
+
+private NewScoreShareRule createNewScoreShareRule(NewScoreShareRule.NewScoreShareRulezConfig entity,long currentTime){
+        try {
+            NewScoreShareRule shareRule = new NewScoreShareRule();
+            Class<NewScoreShareRule.NewScoreShareRulezConfig> rule = NewScoreShareRule.NewScoreShareRulezConfig.class;
+            Field[] declaredFields = rule.getDeclaredFields();
+            for (Field field : declaredFields) {
+                field.setAccessible(true);
+                Class<?> fieldType = field.getType();
+
+                if ( fieldType != NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf.class) {
+                    continue;
+                }
+                NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf config = (NewScoreShareRule.NewScoreShareRulezConfig.ScaleConf) field.get(entity);
+                if(config == null){
+                    continue;
+                }
+
+                //得到这个属性的名字
+                String name = field.getName();
+                //查看时间
+                Integer isScale = config.getIsScale();
+                BigDecimal proportion = config.getProportion();
+                BigDecimal scale = config.getScale();
+                Long startTime = config.getStartTime();
+                Long endTime = config.getEndTime();
+                //翻倍
+                if(isScale == 1 && currentTime >= startTime && currentTime <= endTime){
+                    proportion = proportion.multiply(scale);
+                    //将这个值设置到shareRule中
+                }
+                    PropertyDescriptor propertyDescriptor = new PropertyDescriptor(name, NewScoreShareRule.class);
+                    Method writeMethod = propertyDescriptor.getWriteMethod();
+                    writeMethod.invoke(shareRule,proportion);
+            }
+
+            return shareRule;
+        }catch (Exception e){
+
+        }
+        return null;
+    }
 }
+
+
+
 
 @Data
 @NoArgsConstructor
