@@ -13,6 +13,7 @@ public class _002_冒泡排序 {
 
     /**
      * 冒泡排序就是
+     * 总是相邻的进行比较
      * */
     @Test
     public void 冒泡排序(){
